@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-p8cfha9-57*tt*ph51g=5g0d3ocn(sx1@k09f!8-*+8-oj=1(d
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*', '203.247.166.40']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -39,13 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_apscheduler',
     'rest_framework', # 프레임워크 추가
-    'channels',
     'scheduler',
     'account',
     'frontend',
     'forms',
     'menu',
-
 
 ]
 
@@ -57,7 +55,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -85,11 +83,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'myserver.wsgi.application'
 ASGI_APPLICATION = 'myserver.asgi.application'
 
-CHANNEL_LAYERS = {
-    "default": {
-        "BACKEND": "channels.layers.InMemoryChannelLayer"
-    }
-}
+
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
@@ -113,8 +107,11 @@ DATABASES = {
     'default': {
         'ENGINE': 'djongo',
         'NAME': 'server_db',
-        'HOST': '203.247.166.29',
-        'PORT': 27017,
+        'ENFORCE_SCHEMA': False,
+        'CLIENT': {
+            'host': 'mongodb://203.247.166.29',
+            'port': 27017
+        }
     }
 }
 

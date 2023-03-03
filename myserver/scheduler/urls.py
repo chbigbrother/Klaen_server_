@@ -10,6 +10,7 @@ urlpatterns = [
     path('busan/data/', busan_data_list),
     path('humidity/data/', humidity_data),
     path('humidity/list/', humiditylists),
+    path('temperature/list/', temperaturelists),
     path('dust/list/', dustlists),
     path('dust/data/', dust_data_per_time),
     path('settings/', schedule_settings),
@@ -22,5 +23,8 @@ urlpatterns = [
     path('dust/switch/modify/', dust_switch_modify),
     path('dust/switch/modify/adu/', ard_dust_switch_modify),
     path('dust/switch/get/', dust_switch_get),
+    path('api/dust/switch/get/', app_dust_switch_get),
     path('react/sendingEmail/', sendingEmail),
+    # path('react/deviceSwitchStatus/', deviceSwitchStatus),
+
 ]

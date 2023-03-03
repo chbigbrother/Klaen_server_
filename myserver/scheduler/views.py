@@ -10,7 +10,7 @@ import requests
 from bs4 import BeautifulSoup
 from datetime import timedelta
 from django.shortcuts import render
-from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.csrf import csrf_exempt, requires_csrf_token
 from rest_framework.decorators import api_view
 from background_task import background
 from logging import getLogger
@@ -98,10 +98,11 @@ def get_busan_air_qualily():
             pm10Cai=air_data[i]['pm10Cai'],
         )
 
-client = pymongo.MongoClient('mongodb://localhost:27017')
+client = pymongo.MongoClient('mongodb://203.247.166.29:27017')
 db = client['server_db']
 airdb = db['scheduler_airquality']
 humdb = db['scheduler_humiditysensor']
+tempdb = db['scheduler_temperaturesensor']
 dustdb = db['scheduler_dustsensor']
 dust_switch_db = db['scheduler_dustsensorswitch']
 settingsdb = db['scheduler_schedulesettings']
@@ -282,6 +283,30 @@ def busan_data_list(request):
 
     return HttpResponse(json.dumps(result, default=json_default))
 
+
+
+def humiditylists(request):
+    template_name = 'humidity_list.html'
+    hum_list = HumiditySensor.objects.filter().order_by("-created_at")
+    date = datetime.datetime.today() - timedelta(days=3)
+    date = {
+        "hum_list": hum_list,
+        'dateFrom': date.strftime("%Y-%m-%d"),
+        # 'path': '회사정보 / 설비정보등록'
+    }
+    return render(request, template_name, date)
+
+def temperaturelists(request):
+    template_name = 'temperature_list.html'
+    temp_list = TemperatureSensor.objects.filter().order_by("-created_at")
+    date = datetime.datetime.today() - timedelta(days=3)
+    date = {
+        "hum_list": temp_list,
+        'dateFrom': date.strftime("%Y-%m-%d"),
+        # 'path': '회사정보 / 설비정보등록'
+    }
+    return render(request, template_name, date)
+
 def dustlists(request):
     template_name = 'dust_list.html'
     # airq_list = DustSensor.objects.all().order_by("-timestamp")
@@ -322,17 +347,6 @@ def dustlists(request):
         # 'path': '회사정보 / 설비정보등록'
     }
     return render(request, template_name, data)
-
-def humiditylists(request):
-    template_name = 'humidity_list.html'
-    hum_list = HumiditySensor.objects.filter().order_by("-created_at")
-    date = datetime.datetime.today() - timedelta(days=3)
-    date = {
-        "hum_list": hum_list,
-        'dateFrom': date.strftime("%Y-%m-%d"),
-        # 'path': '회사정보 / 설비정보등록'
-    }
-    return render(request, template_name, date)
 
 def schedule_settings(request):
     template_name = 'schedule_settings.html'
@@ -645,8 +659,8 @@ def dust_switch_modify(request):
 
     return JsonResponse({"message": 'success'})
 
-
-@api_view(['GET', 'POST'])
+# @api_view(['GET', 'POST'])
+@csrf_exempt
 def ard_dust_switch_modify(request):
 
     request = json.loads(request.body)
@@ -668,10 +682,6 @@ def ard_dust_switch_modify(request):
         dust = "on"
     else:
         dust = "off"
-    if lighting == "1":
-        lighting = "on"
-    else:
-        lighting = "off"
 
     dust_switch_db.update_one({"ids": 1}, {"$set": {
         "humidityS": humidity,
@@ -699,3 +709,36 @@ def dust_switch_get(request):
         raise TypeError('not JSON serializable')
 
     return HttpResponse(json.dumps(result, default=json_default)) # demo_task(soup)
+    
+    
+    
+def app_dust_switch_get(request):
+
+    ds = DustSensorSwitch.objects.get(ids=1)
+    if ds.humidityS == "on":
+        hum = "1"
+    else:
+        hum = "0"
+    if ds.temperatureS == "on":
+        temp = "1"
+    else:
+        temp = "0"
+    if ds.dustDensityS == "on":
+        dust = "1"
+    else:
+        dust = "0"
+    result = []
+    result_dict = {}
+    result_dict['hum'] = hum
+    result_dict['temp'] = temp
+    result_dict['dust'] = dust
+    result_dict['lighting'] = ds.lighting
+    result.append(result_dict)
+
+    def json_default(value):
+        if isinstance(value, datetime.date):
+            return value.strftime('%Y-%m-%d')
+        raise TypeError('not JSON serializable')
+
+    return HttpResponse(json.dumps(result, default=json_default)) # demo_task(soup)
+

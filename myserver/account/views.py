@@ -71,7 +71,7 @@ def login(request):
             userinfo.visitcount = cnt
             userinfo.login_at = datetime.datetime.utcnow()
             userinfo.save()
-            return redirect('/')
+            return redirect('/home/')
 
     else:
         form = LoginForm()

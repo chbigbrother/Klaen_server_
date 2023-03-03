@@ -93,7 +93,7 @@ def menu_lists_by_user(request):
 
     return HttpResponse(json.dumps(set_result, default=json_default))
 
-client = pymongo.MongoClient('mongodb://localhost:27017')
+client = pymongo.MongoClient('mongodb://203.247.166.29:27017')
 db = client['server_db']
 menuCheckListDB = db['menu_menuchecklists']
 

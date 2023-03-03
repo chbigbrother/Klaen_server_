@@ -1,25 +1,62 @@
 {% extends 'base.html' %}
 {% block content %}
 <!-- Page Heading -->
-<div class="card shadow mb-4">
+<div class="d-sm-flex align-items-start">
+    <h4 class="h3 mb-0 text-gray-800 p-2 flex-grow-1">Dust</h4>
+     <div class="dropdown no-arrow mb-2 p-2">
+            <button class="btn btn-info dropdown-toggle" type="button"
+                id="dropdownMenuButtonS" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">  Sensors
+            </button>
+           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <!--   <div class="mb-3">
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                            <label class="form-check-label" for="dropdownCheck">
+                        Remember me
+                        </label>
+              </div>
+            </div>-->
+                <a class="dropdown-item" href="#">ALL</a>
+                <a class="dropdown-item" href="#">Dust</a>
+                <a class="dropdown-item" href="#">TVOC</a>
+                <a class="dropdown-item" href="#">CO2</a>
+                <a class="dropdown-item" href="#">Humidity</a>
+                <a class="dropdown-item" href="#">Temperature</a>
+                <a class="dropdown-item" href="#">OZONE</a>
+            </div>
+    </div>
+    <div class="dropdown no-arrow mb-2 p-2">
+            <button class="btn btn-info dropdown-toggle" type="button"
+                id="dropdownMenuButtonSL" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">  Sensors Location
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">PKNU</a>
+                <a class="dropdown-item" href="#">JungRok</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+    </div>
+</div>
+<div class="card shadow mb-3">
     <div class="card-body" style="height:80px; padding-left:2rem;">
-        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <div class="d-flex align-items-center justify-content-between mb-3">
             <!--<h1 class="h3 mb-0 text-gray-800">Dashboard</h1>-->
             <form method="get" action="/scheduler/dust/list/">
-                <div class="row g-2 align-items-center mb-3">
-                    <div class="col col-lg-5">
+                <div class="row g-2 align-items-center mb-2">
+                    <div class="col-5">
                       <div class="input-group">
                         <input type="date" id="date_from" class="form-control"  placeholder="from"  name="dateFrom" value="{{ dateFrom }}" autocomplete="off">
                       </div>
                     </div>
                     <div class="col-auto">~</div>
-                    <div class="col col-lg-5">
+                    <div class="col-5">
                       <div class="input-group">
                         <input type="date" id="date_to"  class="form-control"  placeholder="to" name="dateTo" value="{{ dateTo }}" autocomplete="off">
                       </div>
                     </div>
-                    <div class="col input-group-append">
-                        <button class="btn btn-dark date-search-btn" href="#">
+                    <div class="col-1 input-group-append">
+                        <button class="btn btn-info " href="#">
                             <i class="fas fa-search fa-sm"></i>
                         </button>
                     </div>
@@ -30,19 +67,19 @@
 </div>
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
-    <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">공기질 데이터 리스트</h6>
-    </div>
+    <!--<div class="card-header py-3">
+        <h5 class="m-0 font-weight-bold text-info">Search Results</h5>
+    </div>-->
     <div class="card-body">
         <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <tr>
-                        <th>idx</th>
-                        <th>습도</th>
-                        <th>온도</th>
-                        <th>미세먼지</th>
-                        <th>측정시간</th>
+                        <th>Seq</th>
+                        <th>Humidity</th>
+                        <th>Temperature</th>
+                        <th>Dust</th>
+                        <th>Observed Time</th>
                     </tr>
                 </thead>
                 <tbody>

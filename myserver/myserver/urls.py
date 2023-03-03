@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 from scheduler.views import *
 from .views import *
-
+from account.views import login
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('get/airquality/', get_busan_air_qualily),
@@ -26,6 +26,7 @@ urlpatterns = [
     path('account/', include('account.urls')),
     path('scheduler/', include('scheduler.urls')),
     path('menu/', include('menu.urls')),
-    path('', home),
+    path('', login),
+    path('home/', home),
 ]
 urlpatterns += staticfiles_urlpatterns()

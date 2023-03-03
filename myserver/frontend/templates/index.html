@@ -1,21 +1,42 @@
 {% extends 'base.html' %}
 {% block content %}
+
+<link href="/static/css/tabler.min.css" rel="stylesheet">
 <style>
     .deck-card {
         height:120px;
         margin-bottom: 30px;
     }
-
 </style>
+
 <!-- Page Heading -->
+<!-- Dropdown No Arrow -->
+
+<div class="d-sm-flex align-items-center justify-content-between mt-3">
+    <h3 class="h3 mb-3 text-gray-800">Dashboard</h3>
+    <div class="dropdown no-arrow mb-3">
+            <button class="btn btn-info dropdown-toggle" type="button"
+                id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                Sensors Location
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">PKNU</a>
+                <a class="dropdown-item" href="#">JungRok</a>
+                <a class="dropdown-item" href="#">Something else</a>
+            </div>
+    </div>
+
+
+</div>
 <div class="row row-deck row-cards">
-  <div class="col-sm-6 col-lg-3">
+  <div class="col-md-6 col-xl-3">
     <div class="deck-card card">
       <div class="card-body">
         <div class="d-flex align-items-center">
           <div class="subheader">Humidity</div>
         </div>
-        <div class="mb-3">
+        <div class="mb-2">
             <label class="form-label">Humidity Sensor On-off</label>
             <div class="form-selectgroup">
               <label class="form-selectgroup-item">
@@ -35,7 +56,7 @@
       </div>
     </div>
   </div>
-  <div class="col-sm-6 col-lg-3">
+  <div class="col-md-6 col-xl-3 mb-4">
     <div class="deck-card card">
       <div class="card-body">
         <div class="d-flex align-items-center">
@@ -62,7 +83,7 @@
       <div id="chart-revenue-bg" class="chart-sm"></div>
     </div>
   </div>
-  <div class="col-sm-6 col-lg-3">
+  <div class="col-md-6 col-xl-3 mb-4">
     <div class="deck-card card">
       <div class="card-body">
         <div class="d-flex align-items-center">
@@ -89,7 +110,7 @@
       </div>
     </div>
   </div>
-    <div class="col-sm-6 col-lg-3">
+  <div class="col-md-6 col-xl-3 mb-4">
     <div class="deck-card card">
       <div class="card-body">
         <div class="d-flex align-items-center">
@@ -99,15 +120,33 @@
             <label class="form-label">Lighting Sensor On-off</label>
             <div class="form-selectgroup">
               <label class="form-selectgroup-item">
-                <input type="radio" name="light-icons" value="light-on" class="form-selectgroup-input" checked>
-                <span class="form-selectgroup-label"><!-- Download SVG icon from http://tabler-icons.io/i/home -->
-                  <svg xmlns="http://www.w3.org/2000/svg" class="icon me-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="5 12 3 12 12 3 21 12 19 12" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg>
-                  On</span>
+                     <input type="radio" name="light-icons" value="light-1" class="form-selectgroup-input" checked>
+              <span class="form-selectgroup-label"><!-- Download SVG icon from http://tabler-icons.io/i/home -->
+                  
+              On</span>
+              </label>
+              <label class="form-selector-item form-selectgroup-item-danger">
+                <input type="radio" name="light-icons" value="light-2" class="form-selectgroup-input ">
+                <span class="form-selectgroup-label"><!-- Download SVG icon from http://tabler-icons.io/i/user -->
+
+                  Light</span>
               </label>
               <label class="form-selectgroup-item form-selectgroup-item-danger">
-                <input type="radio" name="light-icons" value="light-off" class="form-selectgroup-input ">
+                <input type="radio" name="light-icons" value="light-3" class="form-selectgroup-input ">
                 <span class="form-selectgroup-label"><!-- Download SVG icon from http://tabler-icons.io/i/user -->
-                  <svg xmlns="http://www.w3.org/2000/svg" class="icon me-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="7" r="4" /><path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /></svg>
+
+                  Soft</span>
+              </label>
+              <label class="form-selectgroup-item form-selectgroup-item-danger">
+                <input type="radio" name="light-icons" value="light-4" class="form-selectgroup-input ">
+                <span class="form-selectgroup-label"><!-- Download SVG icon from http://tabler-icons.io/i/user -->
+
+                  Soften</span>
+              </label>
+              <label class="form-selectgroup-item form-selectgroup-item-danger">
+                <input type="radio" name="light-icons" value="light-5" class="form-selectgroup-input ">
+                <span class="form-selectgroup-label"><!-- Download SVG icon from http://tabler-icons.io/i/user -->
+
                   Off</span>
               </label>
             </div>
@@ -120,12 +159,11 @@
 <!-- Content Row -->
 <div class="row">
     <!-- Area Chart -->
-    <div class="col-xl-12 col-lg-7">
-        <div class="card shadow mb-4">
+    <div class="col-12">
+        <div class="card shadow">
             <!-- Card Header - Dropdown -->
-            <div
-                class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                <h6 class="m-0 font-weight-bold text-primary">일자별 미세먼지 농도</h6>
+            <div class="card-header py-1 d-flex flex-row align-items-center justify-content-between">
+                <h4 class="m-0 font-weight-bold text-primary">Real-time Dataset </h4>
                 <div class="dropdown no-arrow">
                     <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -144,53 +182,92 @@
             <!-- Card Body -->
             <div class="card-body">
                 <div class="chart-area">
-                    <canvas id="myAreaChart" width="1606px" height="318px"></canvas>
+                    <div class="chartjs-size-monitor">
+                        <div class="chartjs-size-monitor-expand">
+                            <div class="">
+                            </div>
+                        </div>
+                        <div class="chartjs-size-monitor-shrink"><div class="">
+                        </div>
+                    </div>
+                    </div>
+                    <canvas id="myAreaChart" class="chartjs-render-monitor" width="1606px" height="318px"></canvas>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Pie Chart -->
-<!--    <div class="col-xl-4 col-lg-5">-->
-<!--        <div class="card shadow mb-4">-->
-<!--            &lt;!&ndash; Card Header - Dropdown &ndash;&gt;-->
-<!--            <div-->
-<!--                class="card-header py-3 d-flex flex-row align-items-center justify-content-between">-->
-<!--                <h6 class="m-0 font-weight-bold text-primary">시간당 미세먼지</h6>-->
-<!--                <div class="dropdown no-arrow">-->
-<!--                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"-->
-<!--                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
-<!--                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>-->
-<!--                    </a>-->
-<!--                    <div class="dropdown-menu dropdown-menu-right shadow animated&#45;&#45;fade-in"-->
-<!--                        aria-labelledby="dropdownMenuLink">-->
-<!--                        <div class="dropdown-header">Dropdown Header:</div>-->
-<!--                        <a class="dropdown-item" href="#">Action</a>-->
-<!--                        <a class="dropdown-item" href="#">Another action</a>-->
-<!--                        <div class="dropdown-divider"></div>-->
-<!--                        <a class="dropdown-item" href="#">Something else here</a>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            &lt;!&ndash; Card Body &ndash;&gt;-->
-<!--            <div class="card-body">-->
-<!--                <div class="chart-pie pt-4 pb-2">-->
-<!--                    <canvas id="myPieChart"></canvas>-->
-<!--                </div>-->
-<!--                <div class="mt-4 text-center small">-->
-<!--                    &lt;!&ndash;<span class="mr-2">-->
-<!--                        <i class="fas fa-circle text-primary"></i> Direct-->
-<!--                    </span>-->
-<!--                    <span class="mr-2">-->
-<!--                        <i class="fas fa-circle text-success"></i> Social-->
-<!--                    </span>-->
-<!--                    <span class="mr-2">-->
-<!--                        <i class="fas fa-circle text-info"></i> Referral-->
-<!--                    </span>&ndash;&gt;-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
+</div>
+<div class="row">
+    <div class="col-12 mt-2">
+        <div class="card">
+            <div class="card-body border-bottom py-3">
+                <div class="d-flex">
+                  <div class="text-muted">
+                    Show
+                    <div class="mx-2 d-inline-block">
+                      <input type="text" class="form-control form-control-sm" value="5" size="3" aria-label="Invoices count">
+                    </div>
+                    entries
+                  </div>
+                  <div class="ms-auto text-muted">
+                    Search:
+                    <div class="ms-2 d-inline-block">
+                      <input type="text" class="form-control form-control-sm" aria-label="Search invoice">
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-vcenter card-table">
+                  <thead>
+                    <tr>
+                      <th>Seq</th>
+                      <th>Humidity</th>
+                      <th>Temperature</th>
+                      <th>Dust</th>
+                      <th>Time</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                        {% for airq in airq_list %}
+                        <tr>
+                            <td>{{ forloop.counter }}</td>
+                            <td>{{ airq.humidity }}</td>
+                            <td>{{ airq.temperature }}</td>
+                            <td>{{ airq.dustDensity }}</td>
+                            <td>{{ airq.timestamp }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="card-footer d-flex align-items-center">
+                <p class="m-0 text-muted">Showing <span>1</span> to <span>5</span> of <span>16</span> entries</p>
+                <ul class="pagination m-0 ms-auto">
+                  <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+                      <!-- Download SVG icon from http://tabler-icons.io/i/chevron-left -->
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="15 6 9 12 15 18" /></svg>
+                      prev
+                    </a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">4</a></li>
+                  <li class="page-item"><a class="page-link" href="#">5</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">
+                      next <!-- Download SVG icon from http://tabler-icons.io/i/chevron-right -->
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="9 6 15 12 9 18" /></svg>
+                    </a>
+                  </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
 </div>
 <!-- Content Row -->
 <script>
