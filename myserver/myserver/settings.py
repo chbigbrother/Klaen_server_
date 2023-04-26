@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django_apscheduler',
     'rest_framework', # 프레임워크 추가
     'scheduler',
+    'sensor',
     'account',
     'frontend',
     'forms',
@@ -174,6 +175,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# 파일 저장
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

@@ -76,11 +76,11 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item {% if menu.1 == 'n' %} none {% endif %}" href="/scheduler/schedule/list/">Korea Air Quality</a>
+                        <a class="collapse-item {% if menu.1 == 'n' %} none {% endif %}" href="/sensor/busanQ/list/">Korea Air Quality</a>
                         <!--<a class="collapse-item {% if menu.2 == 'n' %} none {% endif %}" href="/scheduler/humidity/list/">Humidity</a>
                         <a class="collapse-item {% if menu.3 == 'n' %} none {% endif %}" href="/scheduler/humidity/list/">Temperature </a>-->
 <!--                        <a class="collapse-item {% if menu.3 == 'n' %} none {% endif %}" href="/scheduler/temperature/list/">Temperature </a>-->
-                        <a class="collapse-item {% if menu.4 == 'n' %} none {% endif %}" href="/scheduler/dust/list/">Air Sensors</a>
+                        <a class="collapse-item {% if menu.4 == 'n' %} none {% endif %}" href="/sensor/dust/list/">Air Sensors</a>
                     </div>
                 </div>
             </li>
@@ -93,8 +93,10 @@
                 </a>
                 <div id="collapseMining" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item {% if menu.2 == 'n' %} none {% endif %}" href="/scheduler/schedule/list/">Temperature&Humidity</a>
-                        <a class="collapse-item {% if menu.3 == 'n' %} none {% endif %}" href="/scheduler/dust/list/">Dust&AirQuality</a>
+                        <a class="collapse-item {% if menu.2 == 'n' %} none {% endif %}" href="/sensor/busanQ/list/">Temperature&Humidity</a>
+                        <a class="collapse-item {% if menu.3 == 'n' %} none {% endif %}" href="/sensor/dust/list/">Dust&AirQuality</a>
+                        <a class="collapse-item {% if menu.4 == 'n' %} none {% endif %}" href="/sensor/iaq/list/">IAQ Data</a>
+                        <a class="collapse-item {% if menu.5 == 'n' %} none {% endif %}" href="/scheduler/other/factors/">Other Factors</a>
                     </div>
                 </div>
             </li>
@@ -347,11 +349,11 @@
                                 </a>
                                 <a class="dropdown-item" href="#">
                                     <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
+                                    Preferences
                                 </a>
                                 <a class="dropdown-item" href="#">
                                     <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
+                                    Monthly Report
                                 </a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">

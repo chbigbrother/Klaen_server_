@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% block content %}
+<!-- DataTales Example -->
+<div class="d-sm-flex align-items-center justify-content-between">
+    <h1 class="h3 mb-0 text-gray-800">IQA Data</h1>
+    <div class="dropdown no-arrow mb-4">
+            <button class="btn btn-info dropdown-toggle" type="button"
+                id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                Sensors Location
+            </button>
+            <button class="btn btn-info" type="button"
+                id="uploadBtn" aria-haspopup="true"
+                aria-expanded="false">
+                Data.csv Upload
+            </button>
+    </div>
+
+
+</div>
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">실내 공기질 데이터 리스트</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>idx</th>
+                        <th>IAQ Score</th>
+                        <th>pm10</th>
+                        <th>pm25</th>
+                        <th>pm1</th>
+                        <th>co2</th>
+                        <th>voc</th>
+                        <th>temp</th>
+                        <th>humd</th>
+                        <th>outAvgTemp</th>
+                        <th>rainfall</th>
+                        <th>time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for iaq in iaq_list %}
+                    <tr>
+                        <td>{{ forloop.counter }}</td>
+                        <td>{{ iaq.iaqScore }}</td>
+                        <td>{{ iaq.pm10 }}</td>
+                        <td>{{ iaq.pm25 }}</td>
+                        <td>{{ iaq.pm1 }}</td>
+                        <td>{{ iaq.co2 }}</td>
+                        <td>{{ iaq.voc }}</td>
+                        <td>{{ iaq.temp }}</td>
+                        <td>{{ iaq.humd }}</td>
+                        <td>{{ iaq.outAvgTemp }}</td>
+                        <td>{{ iaq.rainfall }}</td>
+                        <td>{{ iaq.time }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Modal-->
+<div class="modal fade" id="csvUploadModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" style="padding-right: 17px;" aria-modal="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <!--modal header-->
+            <div class="modal-header">
+                <h5 class="modal-title" id="">IQA Data Upload</h5>
+                <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <!--modal header-->
+            <!--modal body-->
+            <div class="modal-body">
+                <div class="modal-body">
+                    <div class="md-form mb-3">
+                        <div class="col-auto">
+                            <form action="#" class="dropzone" name="compDocDropzone" id="csvDropzone" enctype="multipart/form-data">
+                                <div class="fallback">
+                                    <input type="file" name="file" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--modal body-->
+            <!--modal footer-->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-info" id="upload">업로드</button>
+                <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">취소</button>
+            </div>
+            <!--modal footer-->
+        </div>
+    </div>
+</div>
+<!-- Modal-->
+<script src="/static/js/dropzone/dropzone.min.js"></script>
+<script src="/static/js/iaq_list.js"></script>
+{% endblock %}

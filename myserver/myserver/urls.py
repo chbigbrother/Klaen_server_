@@ -25,6 +25,7 @@ urlpatterns = [
     path('post/airquality/', post_air_quality),
     path('account/', include('account.urls')),
     path('scheduler/', include('scheduler.urls')),
+    path('sensor/', include('sensor.urls')),
     path('menu/', include('menu.urls')),
     path('', login),
     path('home/', home),

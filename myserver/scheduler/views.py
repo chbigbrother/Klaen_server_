@@ -14,6 +14,7 @@ from django.views.decorators.csrf import csrf_exempt, requires_csrf_token
 from rest_framework.decorators import api_view
 from background_task import background
 from logging import getLogger
+from forms.utils import dbLocation
 from django.http.response import HttpResponse
 from .models import *
 from myserver.views import get_dates
@@ -21,8 +22,6 @@ from forms.views import send_email
 import pymongo
 import dateutil.parser
 from pytz import timezone, utc
-
-#import json
 import json
 ...
 
@@ -98,7 +97,55 @@ def get_busan_air_qualily():
             pm10Cai=air_data[i]['pm10Cai'],
         )
 
-client = pymongo.MongoClient('mongodb://203.247.166.29:27017')
+def other_factor_lists(request):
+    template_name = 'other_factors.html'
+    hum_list = HumiditySensor.objects.filter().order_by("-created_at")
+    date = datetime.datetime.today() - timedelta(days=3)
+    date = {
+        "hum_list": hum_list,
+        'dateFrom': date.strftime("%Y-%m-%d"),
+        # 'path': '회사정보 / 설비정보등록'
+    }
+    return render(request, template_name, date)
+
+def get_weather_data(date):
+    if date == None:
+        startDt = datetime.datetime.today() - timedelta(days=3)
+        endDt = datetime.datetime.today() - timedelta(days=1)
+        startDt = startDt.strftime("%Y%m%d")
+        endDt = endDt.strftime("%Y%m%d")
+    else:
+        startDt = date.replace('-', '')[:8]
+        endDt = date.replace('-', '')[:8]
+
+    stnIds = '159'
+    serviceKey = "FXEr17kvrd8Whbj9vNbm%2FRAkUbRnRsERDGr7%2BjdrHjYU6ZJKnNixEYbxwfF4BXuLhvewafwgoITp4BE%2BWK9org%3D%3D"
+    serviceKeyDecoded = unquote(serviceKey, 'UTF-8')
+    url = "https://apis.data.go.kr/1360000/AsosDalyInfoService/getWthrDataList"
+    queryParams = '?' + 'serviceKey=' + serviceKey + '&dataCd=ASOS&dateCd=DAY&startDt=' + startDt + '&endDt=' + endDt + '&stnIds=' + stnIds + '&dataType=json'
+    # & dataCd = ASOS & dateCd = DAY & startDt = 20100101 & endDt = 20100102 & stnIds = 159
+
+    request = requests.get(url + queryParams)
+    soup = BeautifulSoup(request.content, 'html.parser')
+    soup = json.loads(str(soup))
+
+    outData = []
+    for i in range(len(soup['response']['body']['items']['item'])):
+        data_dict = {}
+
+        rainfall = soup['response']['body']['items']['item'][i]['sumRn']
+        avgtemp = soup['response']['body']['items']['item'][i]['avgTa']
+        if len(rainfall) > 0:
+            rainfall = 'Y'
+        else:
+            rainfall = 'N'
+        data_dict['rainfall'] = rainfall
+        data_dict['avgtemp'] = avgtemp
+        outData.append(data_dict)
+
+    return outData
+
+client = pymongo.MongoClient(dbLocation)
 db = client['server_db']
 airdb = db['scheduler_airquality']
 humdb = db['scheduler_humiditysensor']
@@ -106,6 +153,8 @@ tempdb = db['scheduler_temperaturesensor']
 dustdb = db['scheduler_dustsensor']
 dust_switch_db = db['scheduler_dustsensorswitch']
 settingsdb = db['scheduler_schedulesettings']
+
+# recent busan air quality data
 def max_site_per_time(request):
 
     get_date = datetime.datetime.today() - timedelta(hours=1)
@@ -164,7 +213,7 @@ def max_site_per_time(request):
 
     return HttpResponse(json.dumps(result_dict, default=json_default)) # demo_task(soup)
 
-
+# busan air quality data search
 def post_air_quality(request):
 
     latest_data = airdb.find({
@@ -231,6 +280,7 @@ def post_air_quality(request):
 
     return HttpResponse(json.dumps(result_dict, default=json_default)) # demo_task(soup)
 
+# scheduling timer info
 def schedule_setting():
     timer = ScheduleSettings.object.all().order_by('id').last()
     # ScheduleSettings.objects.create(
@@ -238,17 +288,7 @@ def schedule_setting():
     # )
     return timer
 
-def schedulelists(request):
-    template_name = 'schedule_list.html'
-    airq_list = AirQuality.objects.all()
-    date = datetime.datetime.today() - timedelta(days=3)
-    date = {
-        "airq_list": airq_list,
-        'dateFrom': date.strftime("%Y-%m-%d"),
-        # 'path': '회사정보 / 설비정보등록'
-    }
-    return render(request, template_name, date)
-
+# busan air quality data list
 def busan_data_list(request):
     airq_list = AirQuality.objects.all()
     result_dict = {}
@@ -283,71 +323,7 @@ def busan_data_list(request):
 
     return HttpResponse(json.dumps(result, default=json_default))
 
-
-
-def humiditylists(request):
-    template_name = 'humidity_list.html'
-    hum_list = HumiditySensor.objects.filter().order_by("-created_at")
-    date = datetime.datetime.today() - timedelta(days=3)
-    date = {
-        "hum_list": hum_list,
-        'dateFrom': date.strftime("%Y-%m-%d"),
-        # 'path': '회사정보 / 설비정보등록'
-    }
-    return render(request, template_name, date)
-
-def temperaturelists(request):
-    template_name = 'temperature_list.html'
-    temp_list = TemperatureSensor.objects.filter().order_by("-created_at")
-    date = datetime.datetime.today() - timedelta(days=3)
-    date = {
-        "hum_list": temp_list,
-        'dateFrom': date.strftime("%Y-%m-%d"),
-        # 'path': '회사정보 / 설비정보등록'
-    }
-    return render(request, template_name, date)
-
-def dustlists(request):
-    template_name = 'dust_list.html'
-    # airq_list = DustSensor.objects.all().order_by("-timestamp")
-
-    if 'dateFrom' in request.GET:
-        dateFrom = request.GET['dateFrom']
-        dateTo = request.GET['dateTo']
-        print(dateFrom)
-    else:
-        dateFrom, dateTo = get_dates(request)
-
-    date_from = dateFrom + " T00:00:00.000Z"
-    date_from = dateutil.parser.parse(date_from)
-    date_to = dateTo + " T23:59:59.000Z"
-    date_to = dateutil.parser.parse(date_to)
-
-    airq_list = dustdb.find({
-        'timestamp':
-            {
-                '$gte': date_from,
-                '$lt': date_to
-            },
-    }).sort("id", -1) # .limit(20).sort("id", -1)
-
-    dust__result = []
-    for i in airq_list:
-        dust_dict = {}
-        dust_dict['humidity'] = i['humidity']
-        dust_dict['temperature'] = i['temperature']
-        dust_dict['dustDensity'] = i['dustDensity']
-        dust_dict['timestamp'] = (i['timestamp'] + datetime.timedelta(hours=9)).strftime("%Y-%m-%d, %H:%M:%S")
-        dust__result.append(dust_dict)
-
-    data = {
-        "airq_list": dust__result,
-        'dateFrom': dateFrom,
-        'dateTo': dateTo,
-        # 'path': '회사정보 / 설비정보등록'
-    }
-    return render(request, template_name, data)
-
+# schedule settings HTML
 def schedule_settings(request):
     template_name = 'schedule_settings.html'
     settings = ScheduleSettings.objects.all()
@@ -359,6 +335,7 @@ def schedule_settings(request):
     }
     return render(request, template_name, date)
 
+# save schedule settings
 @csrf_exempt
 def save_schedule_settings(request):
 
@@ -400,264 +377,7 @@ def search_type(request):
 
     return HttpResponse(json.dumps(result, default=json_default))  # demo_task(soup)
 
-
-def get_humidity():
-    print("HUM_OPERATING")
-    url = "https://vpw.my.id/microcontroller/postData.json"
-
-    request = requests.get(url)
-    soup = BeautifulSoup(request.content, 'html.parser')
-    soup = json.loads(str(soup))
-
-    HumiditySensor.objects.create(
-        moisture=soup[-1]['moistureSensor'],
-    )
-
-def humidity_data(request):
-    hum_data = HumiditySensor.objects.all()
-    hum_result = []
-    for i in hum_data:
-        hum_dict = {}
-        hum_dict['moisture'] = i.moisture
-        hum_dict['timestamp'] = i.created_at.strftime("%Y-%m-%d, %H:%M:%S")
-        hum_result.append(hum_dict)
-
-    def json_default(value):
-        if isinstance(value, datetime.date):
-            return value.strftime('%Y-%m-%d')
-        raise TypeError('not JSON serializable')
-
-    return HttpResponse(json.dumps(hum_result, default=json_default)) # demo_task(soup)
-
-@csrf_exempt
-def post_dust_density(request):
-
-    if request.method == 'POST':
-        humidity = request.POST['humidity']
-        temperature = request.POST['temperature']
-        dustDensity = request.POST['dustDensity'].split("\x00")[0]
-        datetime = request.POST['datetime']
-
-        ds = DustSensorSwitch.objects.get(ids=1)
-
-        if ds.dustDensityS == "off":
-            DustSensor.objects.create(
-                humidity=humidity,
-                temperature=temperature,
-                datetime=datetime,
-            )
-        elif ds.humidityS == "off":
-            DustSensor.objects.create(
-                temperature=temperature,
-                dustDensity=dustDensity,
-                datetime=datetime,
-            )
-        elif ds.temperatureS == "off":
-            DustSensor.objects.create(
-                humidity=humidity,
-                dustDensity=dustDensity,
-                datetime=datetime
-            )
-        elif ds.dustDensityS == "off" and ds.humidityS == "off":
-            DustSensor.objects.create(
-                temperature=temperature,
-                datetime=datetime,
-            )
-        elif ds.dustDensityS == "off" and ds.temperatureS == "off":
-            DustSensor.objects.create(
-                humidity=humidity,
-                datetime=datetime,
-            )
-        elif ds.humidityS == "off" and ds.temperatureS == "off":
-            DustSensor.objects.create(
-                dustDensity=dustDensity,
-                datetime=datetime,
-            )
-        else:
-            DustSensor.objects.create(
-                humidity=humidity,
-                temperature=temperature,
-                dustDensity=dustDensity,
-                datetime=datetime,
-            )
-
-    return HttpResponse("success!")
-
-def get_air_quality():
-    print("AIR_QUALITY_OPERATING")
-    url = "https://vpw.my.id/microcontroller/sensorData.json"
-
-    request = requests.get(url)
-    soup = BeautifulSoup(request.content, 'html.parser')
-    soup = json.loads(str(soup))
-    ds = DustSensorSwitch.objects.get(ids=1)
-
-    if ds.dustDensityS == "off":
-        DustSensor.objects.create(
-            humidity=soup[-1]['humidity'],
-            temperature=soup[-1]['temperature'],
-            datetime=soup[-1]['datetime'],
-        )
-    elif ds.humidityS == "off":
-        DustSensor.objects.create(
-            temperature = soup[-1]['temperature'],
-            dustDensity = soup[-1]['dustDensity'].split("\x00")[0],
-            datetime = soup[-1]['datetime'],
-        )
-    elif ds.temperatureS == "off":
-        DustSensor.objects.create(
-            humidity=soup[-1]['humidity'],
-            dustDensity=soup[-1]['dustDensity'].split("\x00")[0],
-            datetime=soup[-1]['datetime'],
-        )
-    elif ds.dustDensityS == "off" and ds.humidityS == "off":
-        DustSensor.objects.create(
-            temperature=soup[-1]['temperature'],
-            datetime=soup[-1]['datetime'],
-        )
-    elif ds.dustDensityS == "off" and ds.temperatureS == "off":
-        DustSensor.objects.create(
-            humidity=soup[-1]['humidity'],
-            datetime=soup[-1]['datetime'],
-        )
-    elif ds.humidityS == "off" and ds.temperatureS == "off":
-        DustSensor.objects.create(
-            dustDensity=soup[-1]['dustDensity'].split("\x00")[0],
-            datetime=soup[-1]['datetime'],
-        )
-    else:
-        DustSensor.objects.create(
-            humidity=soup[-1]['humidity'],
-            temperature=soup[-1]['temperature'],
-            dustDensity=soup[-1]['dustDensity'].split("\x00")[0],
-            datetime=soup[-1]['datetime'],
-        )
-
-def air_quality_data(request):
-    dust_data = DustSensor.objects.all().order_by("-timestamp")
-    dust_result = []
-    for i in dust_data:
-        dust_dict = {}
-        dust_dict['humidity'] = i.humidity
-        dust_dict['temperature'] = i.temperature
-        dust_dict['dustDensity'] = i.dustDensity
-        dust_dict['timestamp'] = (i.timestamp + datetime.timedelta(hours=9)).strftime("%Y-%m-%d, %H:%M:%S")
-        dust_result.append(dust_dict)
-
-    def json_default(value):
-        if isinstance(value, datetime.date):
-            return value.strftime('%Y-%m-%d')
-        raise TypeError('not JSON serializable')
-
-    return HttpResponse(json.dumps(dust_result, default=json_default)) # demo_task(soup)
-
-def dust_data_per_time(request):
-
-    get_date = datetime.datetime.today() - timedelta(hours=1)
-    get_date = get_date.strftime("%Y-%m-%d")
-    get_date = get_date + " T00:00:00.000Z"
-    get_date = dateutil.parser.parse(get_date)
-
-    latest_data = dustdb.find({
-        'timestamp': {'$gte': get_date},
-    }).limit(20).sort("id", -1)
-
-    result_dict = {}
-    result = []
-
-    for i in latest_data:
-        air_dict = {}
-        air_dict['humidity'] = i['humidity']
-        air_dict['temperature'] = i['temperature']
-        air_dict['dustDensity'] = i['dustDensity']
-        air_dict['timestamp'] = (i['timestamp'] + datetime.timedelta(hours=9)).strftime("%Y-%m-%d, %H:%M:%S")
-        result.append(air_dict)
-
-    def json_default(value):
-        if isinstance(value, datetime.date):
-            return value.strftime('%Y-%m-%d')
-        raise TypeError('not JSON serializable')
-
-    return HttpResponse(json.dumps(result, default=json_default)) # demo_task(soup)
-
-@csrf_exempt
-def humidity_data_backup(request):
-
-    if request.method == 'POST':
-        # data = JSONParser().parse(request)
-        username = request.POST['username']
-        password = request.GET['password']
-
-    return HttpResponse("")
-
-@csrf_exempt
-def anomaly_email(request):
-
-    if request.method == 'POST':
-        subject = request.POST['subject']
-        message = request.POST['message']
-        to_m = request.POST['to']
-    from_m = "pknubrother@gmail.com"
-
-    send_email(subject, message, from_m, to_m)
-
-    return JsonResponse({"message": 'success'})
-
-#new sending email API
-# sending email API
-@csrf_exempt
-def sendingEmail(request):
-    if(request.method == "POST"):
-        body_unicode = request.body.decode('utf-8')
-        body = json.loads(body_unicode)
-        to = body['to']
-        subject = body['subject']
-        contents = body['contents']
-        from_m = "pknubrother@gmail.com"
-        #recipient = body['recipient']
-        # to = request.POST.get('toemail')
-        # content = request.POST.get(content)
-        send_mail(
-            #subject
-            subject,
-            #message
-            contents,
-            #from email
-            from_m,
-            #recipient list
-            [to]
-        )
-        return JsonResponse({'message': 'success'})
-
-def dust_switch_create(request):
-
-    DustSensorSwitch.objects.create(
-        ids = 1,
-        humidityS="on",
-        temperatureS="on",
-        dustDensityS="on",
-    )
-
-    return JsonResponse({"message": 'success'})
-
-@csrf_exempt
-def dust_switch_modify(request):
-
-    if request.method == 'POST':
-        on_off = request.POST['on_off']
-    type = on_off.split('-')[0]
-    on_off = on_off.split('-')[1]
-    if type == "hum":
-        dust_switch_db.update_one({"ids": 1}, {"$set": {"humidityS": on_off}})
-    if type == "temp":
-        dust_switch_db.update_one({"ids": 1}, {"$set": {"temperatureS": on_off}})
-    if type == "dust":
-        dust_switch_db.update_one({"ids": 1}, {"$set": {"dustDensityS": on_off}})
-    if type == "light":
-        dust_switch_db.update_one({"ids": 1}, {"$set": {"lighting": on_off}})
-
-
-    return JsonResponse({"message": 'success'})
+## arduino and react native app api ##
 
 # @api_view(['GET', 'POST'])
 @csrf_exempt
@@ -691,26 +411,6 @@ def ard_dust_switch_modify(request):
 
     return JsonResponse({"message": 'success'})
 
-def dust_switch_get(request):
-
-    ds = DustSensorSwitch.objects.get(ids=1)
-    result = []
-
-    result_dict = {}
-    result_dict['hum'] = 'hum-' + ds.humidityS
-    result_dict['temp'] = 'temp-' + ds.temperatureS
-    result_dict['dust'] = 'dust-' + ds.dustDensityS
-    result_dict['lighting'] = 'light-' + ds.lighting
-    result.append(result_dict)
-
-    def json_default(value):
-        if isinstance(value, datetime.date):
-            return value.strftime('%Y-%m-%d')
-        raise TypeError('not JSON serializable')
-
-    return HttpResponse(json.dumps(result, default=json_default)) # demo_task(soup)
-    
-    
     
 def app_dust_switch_get(request):
 
@@ -732,7 +432,7 @@ def app_dust_switch_get(request):
     result_dict['hum'] = hum
     result_dict['temp'] = temp
     result_dict['dust'] = dust
-    result_dict['lighting'] = ds.lighting
+    result_dict['lighting'] = str(ds.lighting)
     result.append(result_dict)
 
     def json_default(value):

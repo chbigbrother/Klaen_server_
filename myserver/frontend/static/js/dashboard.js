@@ -1,4 +1,4 @@
-function pm10Chart(){
+function pm10Chart(type){
     var ctx = document.getElementById("myAreaChart");
     var dataset = new Array();
     var humdata = new Array();
@@ -31,7 +31,7 @@ function pm10Chart(){
       'rgba(248, 196, 113)',
     ];
     $.ajax({
-        url:  "/scheduler/dust/data/",
+        url:  "/sensor/dust/data/",
         method: 'GET',
         dataType: 'json',
         async: false,
@@ -52,7 +52,8 @@ function pm10Chart(){
                     responsive: true,
                     pointRadius: 0,
                     data: humdata,
-                    borderWidth: 1,
+                    borderWidth: 3,
+                    borderColor: "pink",
             });
 
             dataset.push({
@@ -61,7 +62,8 @@ function pm10Chart(){
                     responsive: true,
                     pointRadius: 0,
                     data: tempdata,
-                    borderWidth: 1,
+                    borderWidth: 3,
+                    borderColor: "lightblue",
             });
 
             dataset.push({
@@ -70,11 +72,12 @@ function pm10Chart(){
                     responsive: true,
                     pointRadius: 0,
                     data: dustdata,
-                    borderWidth: 1,
+                    borderWidth: 3,
+                    borderColor: "lightgreen",
             });
 
             const config = new Chart(ctx, {
-                type: 'bar',
+                type: type,
                 data: {
                     labels: timestamps,
                     datasets: dataset
@@ -173,8 +176,6 @@ function pm10Pie(){
 
 }
 
-setInterval(function () {pm10Chart();
-        pm10Pie();}, 3600000);//request every x seconds
 /*
 const chatSocket = new WebSocket(
     'ws://'
@@ -204,7 +205,7 @@ $('.send-email-btn').on('click', function(){
     obj.subject = $('.subject-title').val();
     console.log(obj);
     $.ajax({
-        url: "/scheduler/anomaly/email/",
+        url: "/sensor/anomaly/email/",
         datatype:'JSON',
         data: obj,
         method: "POST",
@@ -223,7 +224,7 @@ $('.form-selectgroup-input').on('click', function(target){
     var obj = new Object();
     obj.on_off = target.currentTarget.defaultValue;
     $.ajax({
-        url: "/scheduler/dust/switch/modify/",
+        url: "/sensor/dust/switch/modify/",
         datatype:'JSON',
         data: obj,
         method: "POST",
@@ -239,7 +240,7 @@ $('.form-selectgroup-input').on('click', function(target){
 switches();
 function switches(){
     $.ajax({
-        url: "/scheduler/dust/switch/get/",
+        url: "/sensor/dust/switch/get/",
         method: 'GET',
         dataType: 'json',
         async: false,
@@ -258,5 +259,26 @@ function switches(){
         }
 
     });
-
 }
+
+$('.chartSelect').on('change', function(e){
+    var type = $('.chartSelect').val();
+    $('#myAreaChart').remove(); // this is my <canvas> element
+    $('.chart-selections').append('<canvas id="myAreaChart" class="chartjs-render-monitor" width="1606px" height="318px"></canvas>');
+    pm10Chart(type);
+//    if(type=='bar'){
+//
+//    } else{
+//        setInterval(function () {pm10Chart();
+//        pm10Pie();}, 3600000);//request every x seconds
+//    }
+
+});
+
+setInterval(function () {
+    var type = $('.chartSelect').val();
+    $('#myAreaChart').remove(); // this is my <canvas> element
+    $('.chart-selections').append('<canvas id="myAreaChart" class="chartjs-render-monitor" width="1606px" height="318px"></canvas>');
+    pm10Chart(type);
+}, 3600000);
+//        pm10Pie();}, 3600000);//request every x seconds

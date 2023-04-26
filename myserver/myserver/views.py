@@ -4,11 +4,12 @@ from account.models import *
 import datetime, json
 from datetime import timedelta
 from menu.models import MenuLists, MenuCheckLists
+from forms.utils import dbLocation
 import dateutil.parser
 import pymongo
 # 127.0.0.1:8000/
 
-client = pymongo.MongoClient('mongodb://203.247.166.29:27017')
+client = pymongo.MongoClient(dbLocation)
 db = client['server_db']
 dustdb = db['scheduler_dustsensor']
 # 127.0.0.1:8000/

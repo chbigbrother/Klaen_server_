@@ -6,6 +6,7 @@ from .models import *
 from account.models import User
 from forms.views import id_generate
 from datetime import timedelta
+from forms.utils import dbLocation
 import json, datetime
 import pymongo
 # Create your views here.
@@ -93,7 +94,7 @@ def menu_lists_by_user(request):
 
     return HttpResponse(json.dumps(set_result, default=json_default))
 
-client = pymongo.MongoClient('mongodb://203.247.166.29:27017')
+client = pymongo.MongoClient(dbLocation)
 db = client['server_db']
 menuCheckListDB = db['menu_menuchecklists']
 
