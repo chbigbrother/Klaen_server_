@@ -1,0 +1,1992 @@
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 6 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): django_apscheduler.
+Run 'python manage.py migrate' to apply them.
+February 13, 2023 - 08:55:30
+Django version 3.2.17, using settings 'myserver.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+user::::  1
+[13/Feb/2023 08:55:36] "GET / HTTP/1.1" 200 34071
+[13/Feb/2023 08:55:36] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 200 170774
+[13/Feb/2023 08:55:36] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 101894
+[13/Feb/2023 08:55:36] "GET /static/css/tabler.min.css HTTP/1.1" 200 282721
+[13/Feb/2023 08:55:36] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 200 89501
+[13/Feb/2023 08:55:36] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 84378
+[13/Feb/2023 08:55:36] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 200 2532
+[13/Feb/2023 08:55:36] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 200 1265
+[13/Feb/2023 08:55:36] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 200 173077
+[13/Feb/2023 08:55:36] "GET /static/js/dashboard.js HTTP/1.1" 200 7534
+[13/Feb/2023 08:55:36] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 200 2098
+[13/Feb/2023 08:55:36] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 200 103
+[13/Feb/2023 08:55:36] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 150516
+[13/Feb/2023 08:55:36] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 200 83602
+[13/Feb/2023 08:55:36] "GET /static/img/undraw_profile.svg HTTP/1.1" 200 2820
+[13/Feb/2023 08:55:37] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 81
+[13/Feb/2023 08:55:37] "GET /scheduler/dust/data/ HTTP/1.1" 200 100
+[13/Feb/2023 08:55:37] "GET /scheduler/time/ HTTP/1.1" 200 29
+Not Found: /favicon.ico
+[13/Feb/2023 08:55:37] "GET /favicon.ico HTTP/1.1" 404 2899
+user::::  1
+[13/Feb/2023 08:55:41] "GET / HTTP/1.1" 200 34071
+[13/Feb/2023 08:55:41] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 200 170774
+[13/Feb/2023 08:55:41] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 101894
+[13/Feb/2023 08:55:41] "GET /static/css/tabler.min.css HTTP/1.1" 200 282721
+[13/Feb/2023 08:55:41] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 200 89501
+[13/Feb/2023 08:55:41] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 84378
+[13/Feb/2023 08:55:41] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 200 2532
+[13/Feb/2023 08:55:41] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 200 1265
+[13/Feb/2023 08:55:41] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 200 173077
+[13/Feb/2023 08:55:41] "GET /static/img/undraw_profile.svg HTTP/1.1" 200 2820
+[13/Feb/2023 08:55:41] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 200 103
+[13/Feb/2023 08:55:41] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 200 83602
+[13/Feb/2023 08:55:41] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 200 2098
+[13/Feb/2023 08:55:41] "GET /static/js/dashboard.js HTTP/1.1" 200 7534
+[13/Feb/2023 08:55:41] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 150516
+[13/Feb/2023 08:55:41] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 81
+[13/Feb/2023 08:55:41] "GET /scheduler/dust/data/ HTTP/1.1" 200 100
+[13/Feb/2023 08:55:41] "GET /scheduler/time/ HTTP/1.1" 200 29
+Not Found: /favicon.ico
+[13/Feb/2023 08:55:41] "GET /favicon.ico HTTP/1.1" 404 2899
+user::::  1
+[13/Feb/2023 08:55:42] "GET / HTTP/1.1" 200 34071
+[13/Feb/2023 08:55:42] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 101894
+[13/Feb/2023 08:55:42] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 200 170774
+[13/Feb/2023 08:55:42] "GET /static/css/tabler.min.css HTTP/1.1" 200 282721
+[13/Feb/2023 08:55:42] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 200 89501
+[13/Feb/2023 08:55:42] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 84378
+[13/Feb/2023 08:55:42] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 200 2532
+[13/Feb/2023 08:55:42] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 200 1265
+[13/Feb/2023 08:55:42] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 200 2098
+[13/Feb/2023 08:55:42] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 200 103
+[13/Feb/2023 08:55:42] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 200 83602
+[13/Feb/2023 08:55:42] "GET /static/js/dashboard.js HTTP/1.1" 200 7534
+[13/Feb/2023 08:55:42] "GET /static/img/undraw_profile.svg HTTP/1.1" 200 2820
+[13/Feb/2023 08:55:42] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 200 173077
+[13/Feb/2023 08:55:42] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 150516
+[13/Feb/2023 08:55:42] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 81
+[13/Feb/2023 08:55:43] "GET /scheduler/dust/data/ HTTP/1.1" 200 100
+[13/Feb/2023 08:55:43] "GET /scheduler/time/ HTTP/1.1" 200 29
+Not Found: /favicon.ico
+[13/Feb/2023 08:55:43] "GET /favicon.ico HTTP/1.1" 404 2899
+/usr/local/lib/python3.6/dist-packages/django/db/models/fields/__init__.py:1419: RuntimeWarning: DateTimeField UserLog.logout_at received a naive datetime (2023-02-13 08:55:45.888339) while time zone support is active.
+  RuntimeWarning)
+[13/Feb/2023 08:55:45] "GET /account/logout/ HTTP/1.1" 302 0
+[13/Feb/2023 08:55:46] "GET /account/login/ HTTP/1.1" 200 4311
+/usr/local/lib/python3.6/dist-packages/django/db/models/fields/__init__.py:1419: RuntimeWarning: DateTimeField UserLog.login_at received a naive datetime (2023-02-13 08:55:53.039300) while time zone support is active.
+  RuntimeWarning)
+[13/Feb/2023 08:55:53] "POST /account/login/ HTTP/1.1" 302 0
+user::::  1
+[13/Feb/2023 08:55:53] "GET / HTTP/1.1" 200 34071
+[13/Feb/2023 08:55:53] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 81
+[13/Feb/2023 08:55:53] "GET /scheduler/dust/data/ HTTP/1.1" 200 100
+[13/Feb/2023 08:55:53] "GET /scheduler/time/ HTTP/1.1" 200 29
+user::::  1
+[13/Feb/2023 08:56:10] "GET / HTTP/1.1" 200 34071
+[13/Feb/2023 08:56:11] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 81
+[13/Feb/2023 08:56:11] "GET /scheduler/dust/data/ HTTP/1.1" 200 100
+[13/Feb/2023 08:56:11] "GET /scheduler/time/ HTTP/1.1" 200 29
+[13/Feb/2023 08:56:15] "GET /menu/settings/ HTTP/1.1" 200 22962
+[13/Feb/2023 08:56:15] "GET /static/js/menu_settings.js HTTP/1.1" 200 570
+[13/Feb/2023 08:56:16] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 81
+[13/Feb/2023 08:56:18] "GET /account/user/list/ HTTP/1.1" 200 23168
+[13/Feb/2023 08:56:19] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 81
+[13/Feb/2023 08:57:02] "GET /scheduler/settings/ HTTP/1.1" 200 31568
+[13/Feb/2023 08:57:02] "GET /static/js/schedule_settings.js HTTP/1.1" 200 1325
+[13/Feb/2023 08:57:02] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 81
+[13/Feb/2023 08:57:03] "GET /menu/settings/ HTTP/1.1" 200 22962
+[13/Feb/2023 08:57:04] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 81
+[13/Feb/2023 08:58:50] "GET /menu/settings/ HTTP/1.1" 200 22962
+[13/Feb/2023 08:58:50] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 200 170774
+[13/Feb/2023 08:58:50] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 101894
+[13/Feb/2023 08:58:50] "GET /static/css/tabler.min.css HTTP/1.1" 200 282721
+[13/Feb/2023 08:58:50] "GET /static/js/menu_settings.js HTTP/1.1" 200 570
+[13/Feb/2023 08:58:50] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 200 89501
+[13/Feb/2023 08:58:50] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 84378
+[13/Feb/2023 08:58:50] "GET /static/js/dashboard.js HTTP/1.1" 200 7534
+[13/Feb/2023 08:58:50] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 200 83602
+[13/Feb/2023 08:58:50] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 200 173077
+[13/Feb/2023 08:58:50] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 200 2532
+[13/Feb/2023 08:58:50] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 200 1265
+[13/Feb/2023 08:58:50] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 150516
+[13/Feb/2023 08:58:50] "GET /static/img/undraw_profile.svg HTTP/1.1" 200 2820
+[13/Feb/2023 08:58:50] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 200 2098
+[13/Feb/2023 08:58:50] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 200 103
+[13/Feb/2023 08:58:50] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 81
+Not Found: /favicon.ico
+[13/Feb/2023 08:58:50] "GET /favicon.ico HTTP/1.1" 404 2899
+[13/Feb/2023 08:58:52] "GET /scheduler/dust/list/ HTTP/1.1" 200 246179
+[13/Feb/2023 08:58:53] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 81
+user::::  1
+[13/Feb/2023 08:58:55] "GET / HTTP/1.1" 200 34071
+[13/Feb/2023 08:58:55] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 81
+[13/Feb/2023 08:58:55] "GET /scheduler/dust/data/ HTTP/1.1" 200 1956
+[13/Feb/2023 08:58:55] "GET /scheduler/time/ HTTP/1.1" 200 29
+/usr/local/lib/python3.6/dist-packages/apscheduler/util.py:428: PytzUsageWarning: The localize method is no longer necessary, as this time zone supports the fold attribute (PEP 495). For more details on migrating to a PEP 495-compliant implementation, see https://pytz-deprecation-shim.readthedocs.io/en/latest/migration.html
+  return tzinfo.localize(dt)
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+/usr/local/lib/python3.6/dist-packages/apscheduler/util.py:428: PytzUsageWarning: The localize method is no longer necessary, as this time zone supports the fold attribute (PEP 495). For more details on migrating to a PEP 495-compliant implementation, see https://pytz-deprecation-shim.readthedocs.io/en/latest/migration.html
+  return tzinfo.localize(dt)
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+Job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-13 09:10:00 UTC)" raised an exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/djongo/sql2mongo/query.py", line 857, in parse
+    return handler(self, statement)
+  File "/usr/local/lib/python3.6/dist-packages/djongo/sql2mongo/query.py", line 929, in _insert
+    query.execute()
+  File "/usr/local/lib/python3.6/dist-packages/djongo/sql2mongo/query.py", line 397, in execute
+    res = self.db[self.left_table].insert_many(docs, ordered=False)
+  File "/usr/local/lib/python3.6/dist-packages/pymongo/collection.py", line 770, in insert_many
+    blk.execute(write_concern, session=session)
+  File "/usr/local/lib/python3.6/dist-packages/pymongo/bulk.py", line 533, in execute
+    return self.execute_command(generator, write_concern, session)
+  File "/usr/local/lib/python3.6/dist-packages/pymongo/bulk.py", line 366, in execute_command
+    _raise_bulk_write_error(full_result)
+  File "/usr/local/lib/python3.6/dist-packages/pymongo/bulk.py", line 140, in _raise_bulk_write_error
+    raise BulkWriteError(full_result)
+pymongo.errors.BulkWriteError: batch op errors occurred, full error: {'writeErrors': [{'index': 0, 'code': 11000, 'errmsg': 'E11000 duplicate key error collection: server_db.scheduler_dustsensor index: __primary_key__ dup key: { : 2 }', 'op': {'id': 2, 'humidity': 24.0, 'temperature': 22.0, 'dustDensity': 93.95, 'datetime': '2023-02-13 05:58:18', 'timestamp': datetime.datetime(2023, 2, 13, 9, 0, 1, 545317), '_id': ObjectId('63e9fc11efb0203ab51dccc5')}}], 'writeConcernErrors': [], 'nInserted': 0, 'nUpserted': 0, 'nMatched': 0, 'nModified': 0, 'nRemoved': 0, 'upserted': []}
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/djongo/cursor.py", line 56, in execute
+    params)
+  File "/usr/local/lib/python3.6/dist-packages/djongo/sql2mongo/query.py", line 784, in __init__
+    self._query = self.parse()
+  File "/usr/local/lib/python3.6/dist-packages/djongo/sql2mongo/query.py", line 869, in parse
+    raise exe from e
+djongo.exceptions.SQLDecodeError: 
+
+	Keyword: None
+	Sub SQL: None
+	FAILED SQL: INSERT INTO "scheduler_dustsensor" ("humidity", "temperature", "dustDensity", "datetime", "timestamp") VALUES (%(0)s, %(1)s, %(2)s, %(3)s, %(4)s)
+	Params: [24.0, 22.0, 93.95, '2023-02-13 05:58:18', datetime.datetime(2023, 2, 13, 9, 0, 1, 545317)]
+	Version: 1.3.6
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python3.6/dist-packages/djongo/cursor.py", line 59, in execute
+    raise db_exe from e
+djongo.database.DatabaseError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/root/Klaen_server/myserver/scheduler/operator.py", line 17, in auto_mail
+    get_air_quality()
+  File "/root/Klaen_server/myserver/scheduler/views.py", line 519, in get_air_quality
+    datetime=soup[-1]['datetime'],
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/query.py", line 453, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/base.py", line 740, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/base.py", line 778, in save_base
+    force_update, using, update_fields,
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/base.py", line 881, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/base.py", line 921, in _do_insert
+    using=using, raw=raw,
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/sql/compiler.py", line 1416, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/local/lib/python3.6/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python3.6/dist-packages/djongo/cursor.py", line 59, in execute
+    raise db_exe from e
+django.db.utils.DatabaseError
+Job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-13 09:10:00 UTC)" raised an exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/djongo/sql2mongo/query.py", line 857, in parse
+    return handler(self, statement)
+  File "/usr/local/lib/python3.6/dist-packages/djongo/sql2mongo/query.py", line 929, in _insert
+    query.execute()
+  File "/usr/local/lib/python3.6/dist-packages/djongo/sql2mongo/query.py", line 397, in execute
+    res = self.db[self.left_table].insert_many(docs, ordered=False)
+  File "/usr/local/lib/python3.6/dist-packages/pymongo/collection.py", line 770, in insert_many
+    blk.execute(write_concern, session=session)
+  File "/usr/local/lib/python3.6/dist-packages/pymongo/bulk.py", line 533, in execute
+    return self.execute_command(generator, write_concern, session)
+  File "/usr/local/lib/python3.6/dist-packages/pymongo/bulk.py", line 366, in execute_command
+    _raise_bulk_write_error(full_result)
+  File "/usr/local/lib/python3.6/dist-packages/pymongo/bulk.py", line 140, in _raise_bulk_write_error
+    raise BulkWriteError(full_result)
+pymongo.errors.BulkWriteError: batch op errors occurred, full error: {'writeErrors': [{'index': 0, 'code': 11000, 'errmsg': 'E11000 duplicate key error collection: server_db.scheduler_dustsensor index: __primary_key__ dup key: { : 3 }', 'op': {'id': 3, 'humidity': 24.0, 'temperature': 22.0, 'dustDensity': 93.95, 'datetime': '2023-02-13 05:58:18', 'timestamp': datetime.datetime(2023, 2, 13, 9, 0, 1, 645168), '_id': ObjectId('63e9fc118f1fa88e308a05ff')}}], 'writeConcernErrors': [], 'nInserted': 0, 'nUpserted': 0, 'nMatched': 0, 'nModified': 0, 'nRemoved': 0, 'upserted': []}
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/djongo/cursor.py", line 56, in execute
+    params)
+  File "/usr/local/lib/python3.6/dist-packages/djongo/sql2mongo/query.py", line 784, in __init__
+    self._query = self.parse()
+  File "/usr/local/lib/python3.6/dist-packages/djongo/sql2mongo/query.py", line 869, in parse
+    raise exe from e
+djongo.exceptions.SQLDecodeError: 
+
+	Keyword: None
+	Sub SQL: None
+	FAILED SQL: INSERT INTO "scheduler_dustsensor" ("humidity", "temperature", "dustDensity", "datetime", "timestamp") VALUES (%(0)s, %(1)s, %(2)s, %(3)s, %(4)s)
+	Params: [24.0, 22.0, 93.95, '2023-02-13 05:58:18', datetime.datetime(2023, 2, 13, 9, 0, 1, 645168)]
+	Version: 1.3.6
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python3.6/dist-packages/djongo/cursor.py", line 59, in execute
+    raise db_exe from e
+djongo.database.DatabaseError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/root/Klaen_server/myserver/scheduler/operator.py", line 17, in auto_mail
+    get_air_quality()
+  File "/root/Klaen_server/myserver/scheduler/views.py", line 519, in get_air_quality
+    datetime=soup[-1]['datetime'],
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/query.py", line 453, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/base.py", line 740, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/base.py", line 778, in save_base
+    force_update, using, update_fields,
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/base.py", line 881, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/base.py", line 921, in _do_insert
+    using=using, raw=raw,
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/sql/compiler.py", line 1416, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/local/lib/python3.6/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python3.6/dist-packages/djongo/cursor.py", line 59, in execute
+    raise db_exe from e
+django.db.utils.DatabaseError
+user::::  1
+[13/Feb/2023 09:00:56] "GET / HTTP/1.1" 200 34071
+[13/Feb/2023 09:00:57] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 81
+[13/Feb/2023 09:00:57] "GET /scheduler/dust/data/ HTTP/1.1" 200 1956
+[13/Feb/2023 09:00:57] "GET /scheduler/time/ HTTP/1.1" 200 29
+user::::  1
+[13/Feb/2023 09:01:00] "GET / HTTP/1.1" 200 34071
+[13/Feb/2023 09:01:00] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 200 170774
+[13/Feb/2023 09:01:00] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 101894
+[13/Feb/2023 09:01:01] "GET /static/css/tabler.min.css HTTP/1.1" 200 282721
+[13/Feb/2023 09:01:01] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 200 89501
+[13/Feb/2023 09:01:01] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 84378
+[13/Feb/2023 09:01:01] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 200 2532
+[13/Feb/2023 09:01:01] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 200 1265
+[13/Feb/2023 09:01:01] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 200 173077
+[13/Feb/2023 09:01:01] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 200 2098
+[13/Feb/2023 09:01:01] "GET /static/js/dashboard.js HTTP/1.1" 200 7534
+[13/Feb/2023 09:01:01] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 200 83602
+[13/Feb/2023 09:01:01] "GET /static/img/undraw_profile.svg HTTP/1.1" 200 2820
+[13/Feb/2023 09:01:01] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 200 103
+[13/Feb/2023 09:01:01] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 150516
+[13/Feb/2023 09:01:01] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 81
+[13/Feb/2023 09:01:01] "GET /scheduler/dust/data/ HTTP/1.1" 200 1956
+[13/Feb/2023 09:01:01] "GET /scheduler/time/ HTTP/1.1" 200 29
+Not Found: /favicon.ico
+[13/Feb/2023 09:01:01] "GET /favicon.ico HTTP/1.1" 404 2899
+user::::  1
+[13/Feb/2023 09:01:02] "GET / HTTP/1.1" 200 34071
+[13/Feb/2023 09:01:02] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 200 170774
+[13/Feb/2023 09:01:02] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 101894
+[13/Feb/2023 09:01:02] "GET /static/css/tabler.min.css HTTP/1.1" 200 282721
+[13/Feb/2023 09:01:02] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 200 89501
+[13/Feb/2023 09:01:02] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 84378
+[13/Feb/2023 09:01:02] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 200 2532
+[13/Feb/2023 09:01:02] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 200 1265
+[13/Feb/2023 09:01:02] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 200 173077
+[13/Feb/2023 09:01:02] "GET /static/js/dashboard.js HTTP/1.1" 200 7534
+[13/Feb/2023 09:01:02] "GET /static/img/undraw_profile.svg HTTP/1.1" 200 2820
+[13/Feb/2023 09:01:02] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 200 83602
+[13/Feb/2023 09:01:02] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 200 103
+[13/Feb/2023 09:01:02] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 200 2098
+[13/Feb/2023 09:01:02] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 150516
+[13/Feb/2023 09:01:02] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 81
+[13/Feb/2023 09:01:02] "GET /scheduler/dust/data/ HTTP/1.1" 200 1956
+[13/Feb/2023 09:01:02] "GET /scheduler/time/ HTTP/1.1" 200 29
+Not Found: /favicon.ico
+[13/Feb/2023 09:01:03] "GET /favicon.ico HTTP/1.1" 404 2899
+user::::  1
+[13/Feb/2023 09:01:03] "GET / HTTP/1.1" 200 34071
+[13/Feb/2023 09:01:03] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 101894
+[13/Feb/2023 09:01:03] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 200 170774
+[13/Feb/2023 09:01:03] "GET /static/css/tabler.min.css HTTP/1.1" 200 282721
+[13/Feb/2023 09:01:03] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 200 89501
+[13/Feb/2023 09:01:03] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 84378
+[13/Feb/2023 09:01:03] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 200 2532
+[13/Feb/2023 09:01:03] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 200 1265
+[13/Feb/2023 09:01:03] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 200 173077
+[13/Feb/2023 09:01:03] "GET /static/img/undraw_profile.svg HTTP/1.1" 200 2820
+[13/Feb/2023 09:01:03] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 200 103
+[13/Feb/2023 09:01:03] "GET /static/js/dashboard.js HTTP/1.1" 200 7534
+[13/Feb/2023 09:01:03] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 200 2098
+[13/Feb/2023 09:01:03] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 200 83602
+[13/Feb/2023 09:01:03] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 150516
+[13/Feb/2023 09:01:04] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 81
+[13/Feb/2023 09:01:04] "GET /scheduler/dust/data/ HTTP/1.1" 200 1956
+[13/Feb/2023 09:01:04] "GET /scheduler/time/ HTTP/1.1" 200 29
+Not Found: /favicon.ico
+[13/Feb/2023 09:01:04] "GET /favicon.ico HTTP/1.1" 404 2899
+user::::  1
+[13/Feb/2023 09:01:45] "GET / HTTP/1.1" 200 34071
+[13/Feb/2023 09:01:45] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 101894
+[13/Feb/2023 09:01:45] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 200 170774
+[13/Feb/2023 09:01:45] "GET /static/css/tabler.min.css HTTP/1.1" 200 282721
+[13/Feb/2023 09:01:45] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 200 89501
+[13/Feb/2023 09:01:45] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 84378
+[13/Feb/2023 09:01:45] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 200 2532
+[13/Feb/2023 09:01:45] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 200 1265
+[13/Feb/2023 09:01:45] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 200 173077
+[13/Feb/2023 09:01:45] "GET /static/js/dashboard.js HTTP/1.1" 200 7534
+[13/Feb/2023 09:01:45] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 200 2098
+[13/Feb/2023 09:01:45] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 200 103
+[13/Feb/2023 09:01:45] "GET /static/img/undraw_profile.svg HTTP/1.1" 200 2820
+[13/Feb/2023 09:01:45] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 200 83602
+[13/Feb/2023 09:01:45] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 150516
+[13/Feb/2023 09:01:45] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 81
+[13/Feb/2023 09:01:45] "GET /scheduler/dust/data/ HTTP/1.1" 200 1956
+[13/Feb/2023 09:01:45] "GET /scheduler/time/ HTTP/1.1" 200 29
+Not Found: /favicon.ico
+[13/Feb/2023 09:01:45] "GET /favicon.ico HTTP/1.1" 404 2899
+[13/Feb/2023 09:01:47] "GET /scheduler/dust/list/ HTTP/1.1" 200 246179
+[13/Feb/2023 09:01:48] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 81
+user::::  1
+[13/Feb/2023 09:01:51] "GET / HTTP/1.1" 200 34071
+[13/Feb/2023 09:01:52] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 81
+[13/Feb/2023 09:01:52] "GET /scheduler/dust/data/ HTTP/1.1" 200 1956
+[13/Feb/2023 09:01:52] "GET /scheduler/time/ HTTP/1.1" 200 29
+[13/Feb/2023 09:01:55] "GET /scheduler/dust/list/ HTTP/1.1" 200 246179
+[13/Feb/2023 09:01:55] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 81
+user::::  1
+[13/Feb/2023 09:01:57] "GET / HTTP/1.1" 200 34071
+[13/Feb/2023 09:01:58] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 81
+[13/Feb/2023 09:01:58] "GET /scheduler/dust/data/ HTTP/1.1" 200 1956
+[13/Feb/2023 09:01:58] "GET /scheduler/time/ HTTP/1.1" 200 29
+/usr/local/lib/python3.6/dist-packages/apscheduler/util.py:428: PytzUsageWarning: The localize method is no longer necessary, as this time zone supports the fold attribute (PEP 495). For more details on migrating to a PEP 495-compliant implementation, see https://pytz-deprecation-shim.readthedocs.io/en/latest/migration.html
+  return tzinfo.localize(dt)
+/usr/local/lib/python3.6/dist-packages/apscheduler/util.py:428: PytzUsageWarning: The localize method is no longer necessary, as this time zone supports the fold attribute (PEP 495). For more details on migrating to a PEP 495-compliant implementation, see https://pytz-deprecation-shim.readthedocs.io/en/latest/migration.html
+  return tzinfo.localize(dt)
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 6 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): django_apscheduler.
+Run 'python manage.py migrate' to apply them.
+February 13, 2023 - 09:05:22
+Django version 3.2.17, using settings 'myserver.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+/root/Klaen_server/myserver/scheduler/operator.py changed, reloading.
+/usr/local/lib/python3.6/dist-packages/apscheduler/util.py:428: PytzUsageWarning: The localize method is no longer necessary, as this time zone supports the fold attribute (PEP 495). For more details on migrating to a PEP 495-compliant implementation, see https://pytz-deprecation-shim.readthedocs.io/en/latest/migration.html
+  return tzinfo.localize(dt)
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 6 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): django_apscheduler.
+Run 'python manage.py migrate' to apply them.
+February 13, 2023 - 09:05:49
+Django version 3.2.17, using settings 'myserver.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+user::::  1
+[13/Feb/2023 09:05:50] "GET / HTTP/1.1" 200 34071
+[13/Feb/2023 09:05:51] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 200 170774
+[13/Feb/2023 09:05:51] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 101894
+[13/Feb/2023 09:05:51] "GET /static/css/tabler.min.css HTTP/1.1" 200 282721
+[13/Feb/2023 09:05:51] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 200 89501
+[13/Feb/2023 09:05:51] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 84378
+[13/Feb/2023 09:05:51] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 200 2532
+[13/Feb/2023 09:05:51] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 200 1265
+[13/Feb/2023 09:05:51] "GET /static/js/dashboard.js HTTP/1.1" 200 7534
+[13/Feb/2023 09:05:51] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 200 173077
+[13/Feb/2023 09:05:51] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 200 2098
+[13/Feb/2023 09:05:51] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 200 103
+[13/Feb/2023 09:05:51] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 200 83602
+[13/Feb/2023 09:05:51] "GET /static/img/undraw_profile.svg HTTP/1.1" 200 2820
+[13/Feb/2023 09:05:51] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 150516
+[13/Feb/2023 09:05:51] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 81
+[13/Feb/2023 09:05:51] "GET /scheduler/dust/data/ HTTP/1.1" 200 2
+[13/Feb/2023 09:05:51] "GET /scheduler/time/ HTTP/1.1" 200 29
+Not Found: /favicon.ico
+[13/Feb/2023 09:05:51] "GET /favicon.ico HTTP/1.1" 404 2899
+user::::  1
+[13/Feb/2023 09:05:52] "GET / HTTP/1.1" 200 34071
+[13/Feb/2023 09:05:52] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 200 170774
+[13/Feb/2023 09:05:52] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 101894
+[13/Feb/2023 09:05:52] "GET /static/css/tabler.min.css HTTP/1.1" 200 282721
+[13/Feb/2023 09:05:52] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 200 89501
+[13/Feb/2023 09:05:52] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 84378
+[13/Feb/2023 09:05:52] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 200 2532
+[13/Feb/2023 09:05:52] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 200 1265
+[13/Feb/2023 09:05:52] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 200 173077
+[13/Feb/2023 09:05:52] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 200 2098
+[13/Feb/2023 09:05:52] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 200 103
+[13/Feb/2023 09:05:52] "GET /static/js/dashboard.js HTTP/1.1" 200 7534
+[13/Feb/2023 09:05:52] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 200 83602
+[13/Feb/2023 09:05:52] "GET /static/img/undraw_profile.svg HTTP/1.1" 200 2820
+[13/Feb/2023 09:05:52] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 150516
+[13/Feb/2023 09:05:53] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 81
+[13/Feb/2023 09:05:53] "GET /scheduler/dust/data/ HTTP/1.1" 200 2
+[13/Feb/2023 09:05:53] "GET /scheduler/time/ HTTP/1.1" 200 29
+Not Found: /favicon.ico
+[13/Feb/2023 09:05:53] "GET /favicon.ico HTTP/1.1" 404 2899
+user::::  1
+[13/Feb/2023 09:05:54] "GET / HTTP/1.1" 200 34071
+[13/Feb/2023 09:05:54] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 200 170774
+[13/Feb/2023 09:05:54] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 101894
+[13/Feb/2023 09:05:54] "GET /static/css/tabler.min.css HTTP/1.1" 200 282721
+[13/Feb/2023 09:05:54] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 200 89501
+[13/Feb/2023 09:05:54] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 84378
+[13/Feb/2023 09:05:54] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 200 2532
+[13/Feb/2023 09:05:54] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 200 1265
+[13/Feb/2023 09:05:54] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 200 173077
+[13/Feb/2023 09:05:54] "GET /static/img/undraw_profile.svg HTTP/1.1" 200 2820
+[13/Feb/2023 09:05:54] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 200 2098
+[13/Feb/2023 09:05:54] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 200 103
+[13/Feb/2023 09:05:54] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 200 83602
+[13/Feb/2023 09:05:54] "GET /static/js/dashboard.js HTTP/1.1" 200 7534
+[13/Feb/2023 09:05:54] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 150516
+[13/Feb/2023 09:05:54] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 81
+[13/Feb/2023 09:05:55] "GET /scheduler/dust/data/ HTTP/1.1" 200 2
+[13/Feb/2023 09:05:55] "GET /scheduler/time/ HTTP/1.1" 200 29
+Not Found: /favicon.ico
+[13/Feb/2023 09:05:55] "GET /favicon.ico HTTP/1.1" 404 2899
+AIR_QUALITY_OPERATING
+user::::  1
+[13/Feb/2023 09:06:02] "GET / HTTP/1.1" 200 34071
+[13/Feb/2023 09:06:02] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 101894
+[13/Feb/2023 09:06:02] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 200 170774
+[13/Feb/2023 09:06:02] "GET /static/css/tabler.min.css HTTP/1.1" 200 282721
+[13/Feb/2023 09:06:02] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 200 89501
+[13/Feb/2023 09:06:02] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 84378
+[13/Feb/2023 09:06:02] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 200 2532
+[13/Feb/2023 09:06:02] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 200 103
+[13/Feb/2023 09:06:02] "GET /static/js/dashboard.js HTTP/1.1" 200 7534
+[13/Feb/2023 09:06:02] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 200 173077
+[13/Feb/2023 09:06:02] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 200 2098
+[13/Feb/2023 09:06:02] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 200 1265
+[13/Feb/2023 09:06:02] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 200 83602
+[13/Feb/2023 09:06:02] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 150516
+[13/Feb/2023 09:06:02] "GET /static/img/undraw_profile.svg HTTP/1.1" 200 2820
+[13/Feb/2023 09:06:02] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 81
+[13/Feb/2023 09:06:02] "GET /scheduler/dust/data/ HTTP/1.1" 200 100
+[13/Feb/2023 09:06:02] "GET /scheduler/time/ HTTP/1.1" 200 29
+Not Found: /favicon.ico
+[13/Feb/2023 09:06:02] "GET /favicon.ico HTTP/1.1" 404 2899
+/root/Klaen_server/myserver/scheduler/operator.py changed, reloading.
+/usr/local/lib/python3.6/dist-packages/apscheduler/util.py:428: PytzUsageWarning: The localize method is no longer necessary, as this time zone supports the fold attribute (PEP 495). For more details on migrating to a PEP 495-compliant implementation, see https://pytz-deprecation-shim.readthedocs.io/en/latest/migration.html
+  return tzinfo.localize(dt)
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 6 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): django_apscheduler.
+Run 'python manage.py migrate' to apply them.
+February 13, 2023 - 09:06:20
+Django version 3.2.17, using settings 'myserver.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+user::::  1
+[13/Feb/2023 09:06:28] "GET / HTTP/1.1" 200 34071
+[13/Feb/2023 09:06:28] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 81
+[13/Feb/2023 09:06:28] "GET /scheduler/dust/data/ HTTP/1.1" 200 100
+[13/Feb/2023 09:06:28] "GET /scheduler/time/ HTTP/1.1" 200 29
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+user::::  1
+[13/Feb/2023 09:10:40] "GET / HTTP/1.1" 200 34071
+[13/Feb/2023 09:10:40] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 81
+[13/Feb/2023 09:10:40] "GET /scheduler/dust/data/ HTTP/1.1" 200 300
+[13/Feb/2023 09:10:40] "GET /scheduler/time/ HTTP/1.1" 200 29
+/usr/local/lib/python3.6/dist-packages/apscheduler/util.py:428: PytzUsageWarning: The localize method is no longer necessary, as this time zone supports the fold attribute (PEP 495). For more details on migrating to a PEP 495-compliant implementation, see https://pytz-deprecation-shim.readthedocs.io/en/latest/migration.html
+  return tzinfo.localize(dt)
+usage: manage.py runserver [-h] [--ipv6] [--nothreading] [--noreload]
+                           [--nostatic] [--insecure] [--version]
+                           [-v {0,1,2,3}] [--settings SETTINGS]
+                           [--pythonpath PYTHONPATH] [--traceback]
+                           [--no-color] [--force-color]
+                           [addrport]
+manage.py runserver: error: unrecognized arguments: -noreload
+/usr/local/lib/python3.6/dist-packages/apscheduler/util.py:428: PytzUsageWarning: The localize method is no longer necessary, as this time zone supports the fold attribute (PEP 495). For more details on migrating to a PEP 495-compliant implementation, see https://pytz-deprecation-shim.readthedocs.io/en/latest/migration.html
+  return tzinfo.localize(dt)
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 6 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): django_apscheduler.
+Run 'python manage.py migrate' to apply them.
+February 13, 2023 - 09:11:45
+Django version 3.2.17, using settings 'myserver.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+user::::  1
+[13/Feb/2023 09:11:48] "GET / HTTP/1.1" 200 34071
+[13/Feb/2023 09:11:48] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 81
+[13/Feb/2023 09:11:48] "GET /scheduler/dust/data/ HTTP/1.1" 200 300
+[13/Feb/2023 09:11:48] "GET /scheduler/time/ HTTP/1.1" 200 29
+Not Found: /favicon.ico
+[13/Feb/2023 09:11:48] "GET /favicon.ico HTTP/1.1" 404 2899
+[13/Feb/2023 09:11:55] "GET /scheduler/dust/list/ HTTP/1.1" 200 25905
+[13/Feb/2023 09:11:55] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 81
+user::::  1
+[13/Feb/2023 09:11:57] "GET / HTTP/1.1" 200 34071
+[13/Feb/2023 09:11:57] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 81
+[13/Feb/2023 09:11:57] "GET /scheduler/dust/data/ HTTP/1.1" 200 300
+[13/Feb/2023 09:11:57] "GET /scheduler/time/ HTTP/1.1" 200 29
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-13 09:30:00 UTC)" was missed by 0:00:01.055747
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-13 09:30:00 UTC)" was missed by 0:00:01.329383
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+[13/Feb/2023 10:11:57] "GET /scheduler/dust/data/ HTTP/1.1" 200 800
+[13/Feb/2023 10:11:57] "GET /scheduler/time/ HTTP/1.1" 200 29
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-13 10:30:00 UTC)" was missed by 0:00:01.026346
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-13 10:30:00 UTC)" was missed by 0:00:01.027392
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+[13/Feb/2023 10:50:08] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03£ìç\x91ò¡7f]£=*M8ë-4ÞÈ6\x14Z\x888\xadª\x12vÇzß\x02\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[13/Feb/2023 10:50:08] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-13 11:20:00 UTC)" was missed by 0:00:01.138379
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-13 11:20:00 UTC)" was missed by 0:00:01.139324
+[13/Feb/2023 11:11:57] "GET /scheduler/dust/data/ HTTP/1.1" 200 1199
+[13/Feb/2023 11:11:57] "GET /scheduler/time/ HTTP/1.1" 200 29
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-13 11:40:00 UTC)" was missed by 0:00:01.026461
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-13 11:40:00 UTC)" was missed by 0:00:01.027517
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-13 11:50:00 UTC)" was missed by 0:00:01.018251
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-13 11:50:00 UTC)" was missed by 0:00:01.019121
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+[13/Feb/2023 11:56:48,662] - Broken pipe from ('167.94.138.119', 37434)
+
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/Klaen_server/myserver/myserver/views.py", line 11, in home
+    user = User.objects.get(id=user_id)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/query.py", line 437, in get
+    self.model._meta.object_name
+account.models.User.DoesNotExist: User matching query does not exist.
+[13/Feb/2023 11:56:49] "GET / HTTP/1.1" 500 66256
+[13/Feb/2023 11:56:50,155] - Broken pipe from ('167.94.138.119', 40558)
+
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/Klaen_server/myserver/myserver/views.py", line 11, in home
+    user = User.objects.get(id=user_id)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/query.py", line 437, in get
+    self.model._meta.object_name
+account.models.User.DoesNotExist: User matching query does not exist.
+[13/Feb/2023 11:56:50] "GET / HTTP/1.1" 500 66709
+[13/Feb/2023 11:56:51] code 505, message Invalid HTTP version (2.0)
+[13/Feb/2023 11:56:51] "PRI * HTTP/2.0" 505 -
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-13 12:20:00 UTC)" was missed by 0:00:01.084953
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-13 12:20:00 UTC)" was missed by 0:00:01.086286
+[13/Feb/2023 12:11:57] "GET /scheduler/dust/data/ HTTP/1.1" 200 1499
+[13/Feb/2023 12:11:57] "GET /scheduler/time/ HTTP/1.1" 200 29
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-13 12:50:00 UTC)" was missed by 0:00:01.133464
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-13 12:50:00 UTC)" was missed by 0:00:01.134567
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+[13/Feb/2023 12:53:59,057] - Broken pipe from ('167.248.133.45', 57528)
+
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/Klaen_server/myserver/myserver/views.py", line 11, in home
+    user = User.objects.get(id=user_id)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/query.py", line 437, in get
+    self.model._meta.object_name
+account.models.User.DoesNotExist: User matching query does not exist.
+[13/Feb/2023 12:54:00] "GET / HTTP/1.1" 500 66256
+[13/Feb/2023 12:54:00,514] - Broken pipe from ('167.248.133.45', 55302)
+
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/Klaen_server/myserver/myserver/views.py", line 11, in home
+    user = User.objects.get(id=user_id)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/query.py", line 437, in get
+    self.model._meta.object_name
+account.models.User.DoesNotExist: User matching query does not exist.
+[13/Feb/2023 12:54:00] "GET / HTTP/1.1" 500 66709
+[13/Feb/2023 12:54:01,349] - Broken pipe from ('167.248.133.45', 60832)
+
+[13/Feb/2023 12:54:01] code 505, message Invalid HTTP version (2.0)
+[13/Feb/2023 12:54:01] "PRI * HTTP/2.0" 505 -
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-13 13:10:00 UTC)" was missed by 0:00:01.047946
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-13 13:10:00 UTC)" was missed by 0:00:01.048783
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-13 13:20:00 UTC)" was missed by 0:00:01.046844
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-13 13:20:00 UTC)" was missed by 0:00:01.047940
+[13/Feb/2023 13:11:57] "GET /scheduler/dust/data/ HTTP/1.1" 200 1798
+[13/Feb/2023 13:11:57] "GET /scheduler/time/ HTTP/1.1" 200 29
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-13 14:10:00 UTC)" was missed by 0:00:01.111975
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-13 14:10:00 UTC)" was missed by 0:00:01.113113
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+[13/Feb/2023 14:11:57] "GET /scheduler/dust/data/ HTTP/1.1" 200 1998
+[13/Feb/2023 14:11:57] "GET /scheduler/time/ HTTP/1.1" 200 29
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+[13/Feb/2023 15:11:57] "GET /scheduler/dust/data/ HTTP/1.1" 200 1996
+[13/Feb/2023 15:11:57] "GET /scheduler/time/ HTTP/1.1" 200 29
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/Klaen_server/myserver/myserver/views.py", line 11, in home
+    user = User.objects.get(id=user_id)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/query.py", line 437, in get
+    self.model._meta.object_name
+account.models.User.DoesNotExist: User matching query does not exist.
+[13/Feb/2023 15:12:33] "GET / HTTP/1.1" 500 66254
+[13/Feb/2023 15:13:53] code 400, message Bad request syntax ("\x16\x03\x01\x01\t\x01\x00\x01\x05\x03\x03ã\x02¿\x15tw¶Ù7+\x11Ù\x99H\x08\x93Ò\x9a8\x1fí¦{è9ÿÛ'¡qsa /\x85ÊèäTádHì\x07×¾\x94\x80Ëº\x9eÚ\x1a|$ÔTÓzéünöÿn\x00&Ì¨Ì©À/À0À+À,À\x13À\tÀ\x14À")
+[13/Feb/2023 15:13:53] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/Klaen_server/myserver/myserver/views.py", line 11, in home
+    user = User.objects.get(id=user_id)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/query.py", line 437, in get
+    self.model._meta.object_name
+account.models.User.DoesNotExist: User matching query does not exist.
+[13/Feb/2023 15:14:03] "GET / HTTP/1.1" 500 66256
+Not Found: /favicon.ico
+[13/Feb/2023 15:14:45] "GET /favicon.ico HTTP/1.1" 404 2899
+Not Found: /robots.txt
+[13/Feb/2023 15:14:47] "GET /robots.txt HTTP/1.1" 404 2896
+Not Found: /sitemap.xml
+[13/Feb/2023 15:14:49] "GET /sitemap.xml HTTP/1.1" 404 2899
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-13 15:40:00 UTC)" was missed by 0:00:01.076939
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-13 15:40:00 UTC)" was missed by 0:00:01.078073
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-13 16:10:00 UTC)" was missed by 0:00:01.003821
+[13/Feb/2023 16:01:09] code 400, message Bad request version ('À\x14À')
+[13/Feb/2023 16:01:09] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-13 16:20:00 UTC)" was missed by 0:00:01.026320
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-13 16:20:00 UTC)" was missed by 0:00:01.027465
+[13/Feb/2023 16:11:57] "GET /scheduler/dust/data/ HTTP/1.1" 200 1996
+[13/Feb/2023 16:11:57] "GET /scheduler/time/ HTTP/1.1" 200 29
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/Klaen_server/myserver/myserver/views.py", line 11, in home
+    user = User.objects.get(id=user_id)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/query.py", line 437, in get
+    self.model._meta.object_name
+account.models.User.DoesNotExist: User matching query does not exist.
+[13/Feb/2023 16:44:00] "GET / HTTP/1.1" 500 67149
+Not Found: /favicon.ico
+[13/Feb/2023 16:44:00] "GET /favicon.ico HTTP/1.1" 404 2899
+[13/Feb/2023 16:44:20,021] - Broken pipe from ('118.38.231.102', 55728)
+
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/Klaen_server/myserver/myserver/views.py", line 11, in home
+    user = User.objects.get(id=user_id)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/query.py", line 437, in get
+    self.model._meta.object_name
+account.models.User.DoesNotExist: User matching query does not exist.
+[13/Feb/2023 16:44:30] "GET / HTTP/1.1" 500 67290
+[13/Feb/2023 16:44:44,080] - Broken pipe from ('118.38.231.102', 55824)
+
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-13 17:10:00 UTC)" was missed by 0:00:01.056956
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-13 17:10:00 UTC)" was missed by 0:00:01.058047
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+[13/Feb/2023 17:11:57] "GET /scheduler/dust/data/ HTTP/1.1" 200 1995
+[13/Feb/2023 17:11:57] "GET /scheduler/time/ HTTP/1.1" 200 29
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-13 17:40:00 UTC)" was missed by 0:00:01.052836
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-13 17:40:00 UTC)" was missed by 0:00:01.053860
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+[13/Feb/2023 18:11:57] "GET /scheduler/dust/data/ HTTP/1.1" 200 1994
+[13/Feb/2023 18:11:57] "GET /scheduler/time/ HTTP/1.1" 200 29
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+[13/Feb/2023 19:11:57] "GET /scheduler/dust/data/ HTTP/1.1" 200 1996
+[13/Feb/2023 19:11:57] "GET /scheduler/time/ HTTP/1.1" 200 29
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+[13/Feb/2023 19:39:29] code 400, message Bad request version ('¦\x00!ZF½×\x84å')
+[13/Feb/2023 19:39:29] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/Klaen_server/myserver/myserver/views.py", line 11, in home
+    user = User.objects.get(id=user_id)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/query.py", line 437, in get
+    self.model._meta.object_name
+account.models.User.DoesNotExist: User matching query does not exist.
+[13/Feb/2023 19:39:30] "GET / HTTP/1.1" 500 66240
+[13/Feb/2023 19:39:30] code 400, message Bad request syntax ('HELP')
+[13/Feb/2023 19:39:30] "HELP" 400 -
+Not Found: /ecp/Current/exporttool/microsoft.exchange.ediscovery.exporttool.application
+[13/Feb/2023 19:39:31] "GET /ecp/Current/exporttool/microsoft.exchange.ediscovery.exporttool.application HTTP/1.1" 404 3091
+Not Found: /.DS_Store
+[13/Feb/2023 19:39:31] "GET /.DS_Store HTTP/1.1" 404 2893
+Not Found: /info.php
+[13/Feb/2023 19:39:31] "GET /info.php HTTP/1.1" 404 2890
+Not Found: /server-status
+[13/Feb/2023 19:39:31] "GET /server-status HTTP/1.1" 404 2905
+Not Found: /telescope/requests
+[13/Feb/2023 19:39:31] "GET /telescope/requests HTTP/1.1" 404 2920
+Not Found: /.env
+[13/Feb/2023 19:39:31] "GET /.env HTTP/1.1" 404 2878
+Not Found: /.vscode/sftp.json
+[13/Feb/2023 19:39:31] "GET /.vscode/sftp.json HTTP/1.1" 404 2917
+Not Found: /debug/default/view
+[13/Feb/2023 19:39:31] "GET /debug/default/view?panel=config HTTP/1.1" 404 2933
+Not Found: /s/131323e23373e2035313e2933313/_/;/META-INF/maven/com.atlassian.jira/jira-webapp-dist/pom.properties
+[13/Feb/2023 19:39:31] "GET /s/131323e23373e2035313e2933313/_/;/META-INF/maven/com.atlassian.jira/jira-webapp-dist/pom.properties HTTP/1.1" 404 3168
+Not Found: /.git/config
+[13/Feb/2023 19:39:31] "GET /.git/config HTTP/1.1" 404 2899
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/Klaen_server/myserver/myserver/views.py", line 11, in home
+    user = User.objects.get(id=user_id)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/query.py", line 437, in get
+    self.model._meta.object_name
+account.models.User.DoesNotExist: User matching query does not exist.
+[13/Feb/2023 19:39:31] "GET / HTTP/1.1" 500 66664
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/Klaen_server/myserver/myserver/views.py", line 11, in home
+    user = User.objects.get(id=user_id)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/query.py", line 437, in get
+    self.model._meta.object_name
+account.models.User.DoesNotExist: User matching query does not exist.
+[13/Feb/2023 19:39:31] "GET /?rest_route=/wp/v2/users/ HTTP/1.1" 500 67115
+Not Found: /config.json
+[13/Feb/2023 19:39:32] "GET /config.json HTTP/1.1" 404 2899
+Not Found: /v2/_catalog
+[13/Feb/2023 19:39:32] "GET /v2/_catalog HTTP/1.1" 404 2899
+Not Found: /login.action
+[13/Feb/2023 19:39:32] "GET /login.action HTTP/1.1" 404 2902
+Not Found: /api/search
+[13/Feb/2023 19:39:32] "GET /api/search?folderIds=0 HTTP/1.1" 404 2908
+Not Found: /about
+[13/Feb/2023 19:39:32] "GET /about HTTP/1.1" 404 2881
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-13 20:00:00 UTC)" was missed by 0:00:01.051436
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-13 20:00:00 UTC)" was missed by 0:00:01.052569
+[13/Feb/2023 19:56:15] code 400, message Bad request version ('À\x13À')
+[13/Feb/2023 19:56:15] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/Klaen_server/myserver/myserver/views.py", line 11, in home
+    user = User.objects.get(id=user_id)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/query.py", line 437, in get
+    self.model._meta.object_name
+account.models.User.DoesNotExist: User matching query does not exist.
+[13/Feb/2023 19:56:25] "GET / HTTP/1.1" 500 66515
+[13/Feb/2023 19:56:26,116] - Broken pipe from ('43.153.10.221', 32098)
+
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-13 20:20:00 UTC)" was missed by 0:00:01.052073
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-13 20:20:00 UTC)" was missed by 0:00:01.053028
+[13/Feb/2023 20:11:57] "GET /scheduler/dust/data/ HTTP/1.1" 200 1998
+[13/Feb/2023 20:11:57] "GET /scheduler/time/ HTTP/1.1" 200 29
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/Klaen_server/myserver/myserver/views.py", line 11, in home
+    user = User.objects.get(id=user_id)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/query.py", line 437, in get
+    self.model._meta.object_name
+account.models.User.DoesNotExist: User matching query does not exist.
+[13/Feb/2023 21:10:22] "GET / HTTP/1.1" 500 66869
+[13/Feb/2023 21:11:57] "GET /scheduler/dust/data/ HTTP/1.1" 200 1998
+[13/Feb/2023 21:11:57] "GET /scheduler/time/ HTTP/1.1" 200 29
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-13 21:40:00 UTC)" was missed by 0:00:01.041886
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-13 21:40:00 UTC)" was missed by 0:00:01.042961
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+Not Found: /http:/pingjs.qq.com/ping.js
+[13/Feb/2023 22:10:37] "GET http://pingjs.qq.com/ping.js HTTP/1.1" 404 1827
+[13/Feb/2023 22:10:37,806] - Broken pipe from ('185.216.140.186', 58106)
+
+[13/Feb/2023 22:11:57] "GET /scheduler/dust/data/ HTTP/1.1" 200 1999
+[13/Feb/2023 22:11:57] "GET /scheduler/time/ HTTP/1.1" 200 29
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-13 22:50:00 UTC)" was missed by 0:00:01.005384
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+[13/Feb/2023 23:11:57] "GET /scheduler/dust/data/ HTTP/1.1" 200 1999
+[13/Feb/2023 23:11:57] "GET /scheduler/time/ HTTP/1.1" 200 29
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-13 23:40:00 UTC)" was missed by 0:00:01.043224
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-13 23:40:00 UTC)" was missed by 0:00:01.044479
+[13/Feb/2023 23:31:03] code 400, message Bad request syntax ('MGLNDD_139.150.73.211_8000')
+[13/Feb/2023 23:31:03] "MGLNDD_139.150.73.211_8000" 400 -
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-14 00:10:00 UTC)" was missed by 0:00:01.096442
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-14 00:10:00 UTC)" was missed by 0:00:01.097531
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+[14/Feb/2023 00:11:57] "GET /scheduler/dust/data/ HTTP/1.1" 200 1998
+[14/Feb/2023 00:11:57] "GET /scheduler/time/ HTTP/1.1" 200 29
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-14 00:30:00 UTC)" was missed by 0:00:01.025010
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-14 00:30:00 UTC)" was missed by 0:00:01.026116
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+user::::  1
+[14/Feb/2023 00:42:36] "GET / HTTP/1.1" 200 34071
+[14/Feb/2023 00:42:36] "GET /static/js/dashboard.js HTTP/1.1" 304 0
+[14/Feb/2023 00:42:36] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 81
+[14/Feb/2023 00:42:37] "GET /scheduler/dust/data/ HTTP/1.1" 200 1999
+[14/Feb/2023 00:42:37] "GET /scheduler/time/ HTTP/1.1" 200 29
+user::::  1
+[14/Feb/2023 00:47:11] "GET / HTTP/1.1" 200 34071
+[14/Feb/2023 00:47:11] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 200 170774
+[14/Feb/2023 00:47:11] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 101894
+[14/Feb/2023 00:47:11] "GET /static/css/tabler.min.css HTTP/1.1" 200 282721
+[14/Feb/2023 00:47:11] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 200 89501
+[14/Feb/2023 00:47:11] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 200 2532
+[14/Feb/2023 00:47:11] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 84378
+[14/Feb/2023 00:47:11] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 200 1265
+[14/Feb/2023 00:47:11] "GET /static/img/undraw_profile.svg HTTP/1.1" 200 2820
+[14/Feb/2023 00:47:11] "GET /static/js/dashboard.js HTTP/1.1" 200 7534
+[14/Feb/2023 00:47:11] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 200 83602
+[14/Feb/2023 00:47:11] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 200 173077
+[14/Feb/2023 00:47:11] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 200 2098
+[14/Feb/2023 00:47:11] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 200 103
+[14/Feb/2023 00:47:11] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 150516
+[14/Feb/2023 00:47:11] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 81
+[14/Feb/2023 00:47:11] "GET /scheduler/dust/data/ HTTP/1.1" 200 1999
+[14/Feb/2023 00:47:11] "GET /scheduler/time/ HTTP/1.1" 200 29
+Not Found: /favicon.ico
+[14/Feb/2023 00:47:11] "GET /favicon.ico HTTP/1.1" 404 2899
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-14 01:10:00 UTC)" was missed by 0:00:01.081206
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-14 01:10:00 UTC)" was missed by 0:00:01.082347
+user::::  1
+[14/Feb/2023 01:08:51] "GET / HTTP/1.1" 200 34071
+[14/Feb/2023 01:08:51] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 81
+[14/Feb/2023 01:08:51] "GET /scheduler/dust/data/ HTTP/1.1" 200 399
+[14/Feb/2023 01:08:51] "GET /scheduler/time/ HTTP/1.1" 200 29
+user::::  1
+[14/Feb/2023 01:08:55] "GET / HTTP/1.1" 200 34071
+[14/Feb/2023 01:08:55] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 200 170774
+[14/Feb/2023 01:08:55] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 101894
+[14/Feb/2023 01:08:55] "GET /static/css/tabler.min.css HTTP/1.1" 200 282721
+[14/Feb/2023 01:08:55] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 200 89501
+[14/Feb/2023 01:08:55] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 84378
+[14/Feb/2023 01:08:55] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 200 2532
+[14/Feb/2023 01:08:55] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 200 1265
+[14/Feb/2023 01:08:55] "GET /static/js/dashboard.js HTTP/1.1" 200 7534
+[14/Feb/2023 01:08:55] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 150516
+[14/Feb/2023 01:08:55] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 200 173077
+[14/Feb/2023 01:08:55] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 200 83602
+[14/Feb/2023 01:08:55] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 200 2098
+[14/Feb/2023 01:08:55] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 200 103
+[14/Feb/2023 01:08:55] "GET /static/img/undraw_profile.svg HTTP/1.1" 200 2820
+[14/Feb/2023 01:08:55] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 81
+[14/Feb/2023 01:08:56] "GET /scheduler/dust/data/ HTTP/1.1" 200 399
+[14/Feb/2023 01:08:56] "GET /scheduler/time/ HTTP/1.1" 200 29
+Not Found: /favicon.ico
+[14/Feb/2023 01:08:56] "GET /favicon.ico HTTP/1.1" 404 2899
+[14/Feb/2023 01:08:59] "GET /scheduler/dust/list/ HTTP/1.1" 200 45834
+[14/Feb/2023 01:08:59] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 81
+user::::  1
+[14/Feb/2023 01:09:10] "GET / HTTP/1.1" 200 34071
+[14/Feb/2023 01:09:10] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 81
+[14/Feb/2023 01:09:10] "GET /scheduler/dust/data/ HTTP/1.1" 200 399
+[14/Feb/2023 01:09:10] "GET /scheduler/time/ HTTP/1.1" 200 29
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+[14/Feb/2023 01:11:07] code 400, message Bad request syntax ('*1')
+[14/Feb/2023 01:11:07] "*1" 400 -
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-14 01:30:00 UTC)" was missed by 0:00:01.055436
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-14 01:30:00 UTC)" was missed by 0:00:01.056542
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/Klaen_server/myserver/myserver/views.py", line 11, in home
+    user = User.objects.get(id=user_id)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/query.py", line 437, in get
+    self.model._meta.object_name
+account.models.User.DoesNotExist: User matching query does not exist.
+[14/Feb/2023 01:41:09] "GET / HTTP/1.1" 500 66660
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-14 02:10:00 UTC)" was missed by 0:00:01.065761
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-14 02:10:00 UTC)" was missed by 0:00:01.066831
+[14/Feb/2023 02:09:10] "GET /scheduler/dust/data/ HTTP/1.1" 200 799
+[14/Feb/2023 02:09:10] "GET /scheduler/time/ HTTP/1.1" 200 29
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-14 02:40:00 UTC)" was missed by 0:00:01.121451
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-14 02:40:00 UTC)" was missed by 0:00:01.122576
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+[14/Feb/2023 03:09:10] "GET /scheduler/dust/data/ HTTP/1.1" 200 1299
+[14/Feb/2023 03:09:10] "GET /scheduler/time/ HTTP/1.1" 200 29
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-14 04:00:00 UTC)" was missed by 0:00:01.027612
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-14 04:00:00 UTC)" was missed by 0:00:01.028663
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+[14/Feb/2023 04:09:10] "GET /scheduler/dust/data/ HTTP/1.1" 200 1800
+[14/Feb/2023 04:09:10] "GET /scheduler/time/ HTTP/1.1" 200 29
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+[14/Feb/2023 04:42:26] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03"\x03\x9dìTú\x86¼\x83\x89J\x1b\x01\x14\x8d{\x8d¬\x14>ÌýÙ¥\x0e\x81Kñ¶<"P \x1c\x91öI\x8c\x92£~ówÕü²\x98¬X¨"\x9aDYw\x9bÂ\x18ëÅ\x8aÌ \x99\x99\x00 ::\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93\x9a\x9a\x00\x00\x00\x1b\x00\x03\x02\x00\x02Di\x00\x05\x00\x03\x02h2ÿ\x01\x00\x01\x00\x00')
+[14/Feb/2023 04:42:26] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[14/Feb/2023 04:42:26] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03C]\t1%\x93µÒ\x90Á&\x85Ú´_F\x02FÇ§7¹\x05ÆVb\x13Ð!Ô©\x86 ½ëª\x01ñ\x1eñË\x83\\!\x80\xa0¨')
+[14/Feb/2023 04:42:26] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[14/Feb/2023 04:42:28] code 400, message Bad request syntax ("\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x15l\x8eí\x16ª]D\x85\x9d\x8f·\xa0w=~\x982U\x12¢3â\r\x13\x8a.ëG\x08p# k\x03\x1aª\x88\x0crF\x90Ø`ýØ4'mrõä\x1e¾\x9ae8\x14\x13Æ\x943QûÒ\x00 \x9a\x9a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93ÊÊ\x00\x00ÿ\x01\x00\x01\x00\x00+\x00\x07\x06**\x03\x04\x03\x03\x00-\x00\x02\x01\x01Di\x00\x05\x00\x03\x02h2\x00")
+[14/Feb/2023 04:42:28] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[14/Feb/2023 04:42:28] code 400, message Bad request version ('\x9a\x9a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93')
+[14/Feb/2023 04:42:28] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[14/Feb/2023 04:42:28] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x03knÐßÖ®f\x83b®\x0cX\'Ï®"«ò½É\x1cJ\x14\x9a×¼×Ô\x0cåù IW5èÉOª(\x97dxÉ\x81$ñøf\x9dë=\x03x\x11\x90qQì\rî%ìM\x00 úú\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93ÚÚ\x00\x00\x00+\x00\x07\x06úú\x03\x04\x03\x03\x00#\x00\x00\x00\x12\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00-\x00\x02\x01\x01\x00\x0b\x00\x02\x01\x00\x00')
+[14/Feb/2023 04:42:28] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[14/Feb/2023 04:42:28] code 400, message Bad request syntax ("\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x97IÞÄ'½\x8bãE9\x9dRgvç¦ü©ìë½¤\x1eßPó\x19°2T\x17} ^zZ=\x07Ö\x13\x8d]¡ÛÖÆ\x7f\x86ï\x81ú¼\x1a1RWCîx\x1c\x0c1Ù\x05e\x00 ::\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93êê\x00\x00\x00\x1b\x00\x03\x02\x00\x02\x00\x12\x00\x00\x00\x17\x00\x00\x00\x0b\x00\x02\x01\x00\x00-\x00\x02\x01\x01\x00\r\x00\x14\x00\x12\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x02\x01\x00\x05\x00\x05\x01\x00\x00\x00\x00ÿ\x01\x00\x01\x00\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\x00")
+[14/Feb/2023 04:42:28] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/Klaen_server/myserver/myserver/views.py", line 11, in home
+    user = User.objects.get(id=user_id)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/query.py", line 437, in get
+    self.model._meta.object_name
+account.models.User.DoesNotExist: User matching query does not exist.
+[14/Feb/2023 04:42:28] "GET / HTTP/1.1" 500 67486
+Not Found: /favicon.ico
+[14/Feb/2023 04:42:29] "GET /favicon.ico HTTP/1.1" 404 2899
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/Klaen_server/myserver/myserver/views.py", line 11, in home
+    user = User.objects.get(id=user_id)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/query.py", line 437, in get
+    self.model._meta.object_name
+account.models.User.DoesNotExist: User matching query does not exist.
+[14/Feb/2023 04:42:33] "GET / HTTP/1.1" 500 67287
+Not Found: /favicon.ico
+[14/Feb/2023 04:42:35] "GET /favicon.ico HTTP/1.1" 404 2899
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/Klaen_server/myserver/myserver/views.py", line 11, in home
+    user = User.objects.get(id=user_id)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/query.py", line 437, in get
+    self.model._meta.object_name
+account.models.User.DoesNotExist: User matching query does not exist.
+[14/Feb/2023 04:42:35] "GET / HTTP/1.1" 500 67150
+[14/Feb/2023 04:42:55] "GET /account/login HTTP/1.1" 301 0
+[14/Feb/2023 04:42:55] "GET /account/login/ HTTP/1.1" 200 4311
+[14/Feb/2023 04:42:56] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 200 2532
+[14/Feb/2023 04:42:56] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 200 1265
+[14/Feb/2023 04:42:56] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 101894
+[14/Feb/2023 04:42:56] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 200 170774
+[14/Feb/2023 04:42:56] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 200 89501
+[14/Feb/2023 04:42:56] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 84378
+/usr/local/lib/python3.6/dist-packages/django/db/models/fields/__init__.py:1419: RuntimeWarning: DateTimeField UserLog.login_at received a naive datetime (2023-02-14 04:43:24.601333) while time zone support is active.
+  RuntimeWarning)
+[14/Feb/2023 04:43:24] "POST /account/login/ HTTP/1.1" 302 0
+user::::  1
+[14/Feb/2023 04:43:24] "GET / HTTP/1.1" 200 34071
+[14/Feb/2023 04:43:24] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 200 173077
+[14/Feb/2023 04:43:24] "GET /static/css/tabler.min.css HTTP/1.1" 200 282721
+[14/Feb/2023 04:43:25] "GET /static/js/dashboard.js HTTP/1.1" 200 7534
+[14/Feb/2023 04:43:25] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 200 103
+[14/Feb/2023 04:43:25] "GET /static/img/undraw_profile.svg HTTP/1.1" 200 2820
+[14/Feb/2023 04:43:25] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 200 2098
+[14/Feb/2023 04:43:25] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 200 83602
+[14/Feb/2023 04:43:25] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 150516
+[14/Feb/2023 04:43:25] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 81
+[14/Feb/2023 04:43:25] "GET /scheduler/dust/data/ HTTP/1.1" 200 2002
+[14/Feb/2023 04:43:25] "GET /scheduler/time/ HTTP/1.1" 200 29
+user::::  1
+[14/Feb/2023 04:43:30] "GET / HTTP/1.1" 200 34071
+[14/Feb/2023 04:43:30] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 81
+[14/Feb/2023 04:43:30] "GET /scheduler/dust/data/ HTTP/1.1" 200 2002
+[14/Feb/2023 04:43:30] "GET /scheduler/time/ HTTP/1.1" 200 29
+user::::  1
+[14/Feb/2023 04:43:57] "GET / HTTP/1.1" 200 34071
+[14/Feb/2023 04:43:57] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 81
+[14/Feb/2023 04:43:57] "GET /scheduler/dust/data/ HTTP/1.1" 200 2002
+[14/Feb/2023 04:43:57] "GET /scheduler/time/ HTTP/1.1" 200 29
+user::::  1
+[14/Feb/2023 04:44:25] "GET / HTTP/1.1" 200 34071
+[14/Feb/2023 04:44:26] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 81
+[14/Feb/2023 04:44:26] "GET /scheduler/dust/data/ HTTP/1.1" 200 2002
+[14/Feb/2023 04:44:26] "GET /scheduler/time/ HTTP/1.1" 200 29
+[14/Feb/2023 04:44:40] "GET /scheduler/dust/list/ HTTP/1.1" 200 50822
+[14/Feb/2023 04:44:40] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 81
+user::::  1
+[14/Feb/2023 04:45:06] "GET / HTTP/1.1" 200 34071
+[14/Feb/2023 04:45:06] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 81
+[14/Feb/2023 04:45:06] "GET /scheduler/dust/data/ HTTP/1.1" 200 2002
+[14/Feb/2023 04:45:06] "GET /scheduler/time/ HTTP/1.1" 200 29
+[14/Feb/2023 04:45:36] "GET /scheduler/settings/ HTTP/1.1" 200 31568
+[14/Feb/2023 04:45:36] "GET /static/js/schedule_settings.js HTTP/1.1" 200 1325
+[14/Feb/2023 04:45:36] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 81
+[14/Feb/2023 04:45:46] "GET /menu/settings/ HTTP/1.1" 200 22962
+[14/Feb/2023 04:45:47] "GET /static/js/menu_settings.js HTTP/1.1" 200 570
+[14/Feb/2023 04:45:47] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 81
+user::::  1
+[14/Feb/2023 04:46:00] "GET / HTTP/1.1" 200 34071
+[14/Feb/2023 04:46:00] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 81
+[14/Feb/2023 04:46:00] "GET /scheduler/dust/data/ HTTP/1.1" 200 2002
+[14/Feb/2023 04:46:00] "GET /scheduler/time/ HTTP/1.1" 200 29
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-14 05:10:00 UTC)" was missed by 0:00:01.044237
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-14 05:10:00 UTC)" was missed by 0:00:01.045232
+user::::  1
+[14/Feb/2023 05:01:34] "GET / HTTP/1.1" 200 34071
+[14/Feb/2023 05:01:35] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 81
+[14/Feb/2023 05:01:35] "GET /scheduler/dust/data/ HTTP/1.1" 200 2002
+[14/Feb/2023 05:01:35] "GET /scheduler/time/ HTTP/1.1" 200 29
+[14/Feb/2023 05:03:43] "GET /scheduler/dust/list/ HTTP/1.1" 200 51099
+[14/Feb/2023 05:03:43] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 81
+/usr/local/lib/python3.6/dist-packages/django/db/models/fields/__init__.py:1419: RuntimeWarning: DateTimeField UserLog.logout_at received a naive datetime (2023-02-14 05:04:12.120813) while time zone support is active.
+  RuntimeWarning)
+[14/Feb/2023 05:04:12] "GET /account/logout/ HTTP/1.1" 302 0
+[14/Feb/2023 05:04:12] "GET /account/login/ HTTP/1.1" 200 4311
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-14 05:20:00 UTC)" was missed by 0:00:01.005025
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-14 05:20:00 UTC)" was missed by 0:00:01.006501
+/usr/local/lib/python3.6/dist-packages/django/db/models/fields/__init__.py:1419: RuntimeWarning: DateTimeField UserLog.login_at received a naive datetime (2023-02-14 05:14:06.429677) while time zone support is active.
+  RuntimeWarning)
+[14/Feb/2023 05:14:06] "POST /account/login/ HTTP/1.1" 302 0
+user::::  1
+[14/Feb/2023 05:14:06] "GET / HTTP/1.1" 200 34071
+[14/Feb/2023 05:14:07] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 81
+[14/Feb/2023 05:14:07] "GET /scheduler/dust/data/ HTTP/1.1" 200 2002
+[14/Feb/2023 05:14:07] "GET /scheduler/time/ HTTP/1.1" 200 29
+[14/Feb/2023 05:16:05] code 400, message Bad request version ('À\x14À')
+[14/Feb/2023 05:16:05] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[14/Feb/2023 05:16:05] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x17/÷ÅÀÍÃ\x01U\x110\x04DÌ\x99äa<»ñª\x16\x97ßÄeÈQ\x99`:t\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[14/Feb/2023 05:16:05] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/Klaen_server/myserver/myserver/views.py", line 11, in home
+    user = User.objects.get(id=user_id)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/query.py", line 437, in get
+    self.model._meta.object_name
+account.models.User.DoesNotExist: User matching query does not exist.
+[14/Feb/2023 05:16:06] "GET / HTTP/1.1" 500 66766
+[14/Feb/2023 05:16:07] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x19°ý¶zÞèdç¥1\x8aäÙoú\x0e7ÜIß"ò\x01\x15w!\x1bû_)©\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[14/Feb/2023 05:16:07] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/Klaen_server/myserver/myserver/views.py", line 11, in home
+    user = User.objects.get(id=user_id)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/query.py", line 437, in get
+    self.model._meta.object_name
+account.models.User.DoesNotExist: User matching query does not exist.
+[14/Feb/2023 05:18:40] "GET / HTTP/1.1" 500 67360
+Not Found: /favicon.ico
+[14/Feb/2023 05:18:40] "GET /favicon.ico HTTP/1.1" 404 2899
+[14/Feb/2023 05:18:53] "GET /account/login HTTP/1.1" 301 0
+[14/Feb/2023 05:18:53] "GET /account/login/ HTTP/1.1" 200 4311
+[14/Feb/2023 05:18:53] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 200 170774
+[14/Feb/2023 05:18:53] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 101894
+[14/Feb/2023 05:18:53] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 200 1265
+[14/Feb/2023 05:18:53] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 200 2532
+[14/Feb/2023 05:18:53] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 200 89501
+[14/Feb/2023 05:18:53] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 84378
+[14/Feb/2023 05:18:53] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 200 1265
+[14/Feb/2023 05:18:53] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 200 2532
+[14/Feb/2023 05:18:53] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 84378
+[14/Feb/2023 05:18:53] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 200 89501
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-14 05:30:00 UTC)" was missed by 0:00:01.077415
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-14 05:30:00 UTC)" was missed by 0:00:01.078505
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-14 05:40:00 UTC)" was missed by 0:00:01.065233
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-14 05:40:00 UTC)" was missed by 0:00:01.066696
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/Klaen_server/myserver/myserver/views.py", line 11, in home
+    user = User.objects.get(id=user_id)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/query.py", line 437, in get
+    self.model._meta.object_name
+account.models.User.DoesNotExist: User matching query does not exist.
+[14/Feb/2023 05:32:36] "GET / HTTP/1.1" 500 66760
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+[14/Feb/2023 05:46:01] "GET /scheduler/dust/data/ HTTP/1.1" 200 2003
+[14/Feb/2023 05:46:01] "GET /scheduler/time/ HTTP/1.1" 200 29
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-14 06:00:00 UTC)" was missed by 0:00:01.050783
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-14 06:00:00 UTC)" was missed by 0:00:01.051754
+Not Found: /favicon.ico
+[14/Feb/2023 05:59:07] "GET /favicon.ico HTTP/1.1" 404 2899
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 6 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): django_apscheduler.
+Run 'python manage.py migrate' to apply them.
+February 14, 2023 - 06:54:42
+Django version 3.2.17, using settings 'myserver.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+user::::  1
+[14/Feb/2023 06:54:46] "GET /home/ HTTP/1.1" 200 38522
+[14/Feb/2023 06:54:46] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 200 170909
+[14/Feb/2023 06:54:46] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 101894
+[14/Feb/2023 06:54:46] "GET /static/css/tabler.min.css HTTP/1.1" 200 282721
+[14/Feb/2023 06:54:46] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 200 89501
+[14/Feb/2023 06:54:46] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 84378
+[14/Feb/2023 06:54:46] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 200 2532
+[14/Feb/2023 06:54:46] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 200 1265
+[14/Feb/2023 06:54:46] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 200 173077
+[14/Feb/2023 06:54:47] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 200 2098
+[14/Feb/2023 06:54:47] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 200 103
+[14/Feb/2023 06:54:47] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 200 83602
+[14/Feb/2023 06:54:47] "GET /static/js/dashboard.js HTTP/1.1" 200 7534
+[14/Feb/2023 06:54:47] "GET /static/img/undraw_profile.svg HTTP/1.1" 200 2820
+[14/Feb/2023 06:54:47] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 150516
+[14/Feb/2023 06:54:47] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 81
+[14/Feb/2023 06:54:47] "GET /scheduler/dust/data/ HTTP/1.1" 200 2003
+[14/Feb/2023 06:54:47] "GET /scheduler/time/ HTTP/1.1" 200 29
+Not Found: /favicon.ico
+[14/Feb/2023 06:54:47] "GET /favicon.ico HTTP/1.1" 404 3004
+/usr/local/lib/python3.6/dist-packages/apscheduler/util.py:428: PytzUsageWarning: The localize method is no longer necessary, as this time zone supports the fold attribute (PEP 495). For more details on migrating to a PEP 495-compliant implementation, see https://pytz-deprecation-shim.readthedocs.io/en/latest/migration.html
+  return tzinfo.localize(dt)
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-14 07:10:00 UTC)" was missed by 0:00:01.054098
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-14 07:10:00 UTC)" was missed by 0:00:01.359529
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+[14/Feb/2023 07:34:34] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[14/Feb/2023 07:34:34] "  /*à     Cookie: mstshash=Administr" 400 -
+[14/Feb/2023 07:36:13] "GET / HTTP/1.1" 200 4311
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+[14/Feb/2023 07:46:01] "GET /scheduler/dust/data/ HTTP/1.1" 200 2004
+[14/Feb/2023 07:46:01] "GET /scheduler/time/ HTTP/1.1" 200 29
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-14 08:00:00 UTC)" was missed by 0:00:01.069062
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-14 08:00:00 UTC)" was missed by 0:00:01.070049
+[14/Feb/2023 07:53:39] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[14/Feb/2023 07:53:39] "  /*à     Cookie: mstshash=Administr" 400 -
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+[14/Feb/2023 08:14:15] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[14/Feb/2023 08:14:15] "  /*à     Cookie: mstshash=Administr" 400 -
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-14 08:40:00 UTC)" was missed by 0:00:01.049622
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-14 08:40:00 UTC)" was missed by 0:00:01.050587
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+[14/Feb/2023 08:46:01] "GET /scheduler/dust/data/ HTTP/1.1" 200 2002
+[14/Feb/2023 08:46:01] "GET /scheduler/time/ HTTP/1.1" 200 29
+HUM_OPERATING
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-14 09:00:00 UTC)" was missed by 0:00:01.001050
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-14 09:20:00 UTC)" was missed by 0:00:01.042551
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-14 09:20:00 UTC)" was missed by 0:00:01.043528
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-14 09:30:00 UTC)" was missed by 0:00:01.012543
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-14 09:30:00 UTC)" was missed by 0:00:01.013609
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+[14/Feb/2023 09:46:01] "GET /scheduler/dust/data/ HTTP/1.1" 200 2001
+[14/Feb/2023 09:46:01] "GET /scheduler/time/ HTTP/1.1" 200 29
+HUM_OPERATINGAIR_QUALITY_OPERATING
+
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-14 10:20:00 UTC)" was missed by 0:00:01.151746
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-14 10:20:00 UTC)" was missed by 0:00:01.152734
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+[14/Feb/2023 10:46:01] "GET /scheduler/dust/data/ HTTP/1.1" 200 1999
+[14/Feb/2023 10:46:01] "GET /scheduler/time/ HTTP/1.1" 200 29
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-14 11:40:00 UTC)" was missed by 0:00:01.052265
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-14 11:40:00 UTC)" was missed by 0:00:01.053421
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+[14/Feb/2023 11:46:01] "GET /scheduler/dust/data/ HTTP/1.1" 200 1997
+[14/Feb/2023 11:46:01] "GET /scheduler/time/ HTTP/1.1" 200 29
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-14 12:30:00 UTC)" was missed by 0:00:01.037737
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-14 12:30:00 UTC)" was missed by 0:00:01.038784
+[14/Feb/2023 12:28:44] "GET / HTTP/1.1" 200 4311
+Not Found: /http:/api.ipify.org/
+[14/Feb/2023 12:29:03] "GET http://api.ipify.org/?format=json HTTP/1.1" 404 1818
+Not Found: /www.shadowserver.org:443
+[14/Feb/2023 12:29:06] "CONNECT www.shadowserver.org:443 HTTP/1.1" 404 1827
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-14 12:50:00 UTC)" was missed by 0:00:01.071485
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-14 12:50:00 UTC)" was missed by 0:00:01.072557
+[14/Feb/2023 12:46:01] "GET /scheduler/dust/data/ HTTP/1.1" 200 1996
+[14/Feb/2023 12:46:01] "GET /scheduler/time/ HTTP/1.1" 200 29
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-14 13:50:00 UTC)" was missed by 0:00:01.117356
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-14 13:50:00 UTC)" was missed by 0:00:01.118453
+[14/Feb/2023 13:46:01] "GET /scheduler/dust/data/ HTTP/1.1" 200 1996
+[14/Feb/2023 13:46:01] "GET /scheduler/time/ HTTP/1.1" 200 29
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-14 14:10:00 UTC)" was missed by 0:00:01.018253
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-14 14:10:00 UTC)" was missed by 0:00:01.019252
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+[14/Feb/2023 14:46:01] "GET /scheduler/dust/data/ HTTP/1.1" 200 1996
+[14/Feb/2023 14:46:01] "GET /scheduler/time/ HTTP/1.1" 200 29
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+Not Found: /http:/pingjs.qq.com/ping.js
+[14/Feb/2023 14:59:47] "GET http://pingjs.qq.com/ping.js HTTP/1.1" 404 1827
+[14/Feb/2023 14:59:47,883] - Broken pipe from ('185.216.140.186', 38140)
+
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-14 15:10:00 UTC)" was missed by 0:00:01.001544
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-14 15:10:00 UTC)" was missed by 0:00:01.003065
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-14 15:40:00 UTC)" was missed by 0:00:01.135593
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-14 15:40:00 UTC)" was missed by 0:00:01.136533
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+[14/Feb/2023 15:46:01] "GET /scheduler/dust/data/ HTTP/1.1" 200 1997
+[14/Feb/2023 15:46:01] "GET /scheduler/time/ HTTP/1.1" 200 29
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+[14/Feb/2023 16:16:19] "GET / HTTP/1.1" 200 4311
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-14 16:40:00 UTC)" was missed by 0:00:01.071041
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-14 16:40:00 UTC)" was missed by 0:00:01.072056
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+[14/Feb/2023 16:46:01] "GET /scheduler/dust/data/ HTTP/1.1" 200 1999
+[14/Feb/2023 16:46:01] "GET /scheduler/time/ HTTP/1.1" 200 29
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+[14/Feb/2023 17:46:01] "GET /scheduler/dust/data/ HTTP/1.1" 200 1997
+[14/Feb/2023 17:46:01] "GET /scheduler/time/ HTTP/1.1" 200 29
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-14 18:00:00 UTC)" was missed by 0:00:01.014351
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-14 18:00:00 UTC)" was missed by 0:00:01.015478
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-14 18:30:00 UTC)" was missed by 0:00:01.001760
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-14 18:30:00 UTC)" was missed by 0:00:01.003265
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+[14/Feb/2023 18:46:01] "GET /scheduler/dust/data/ HTTP/1.1" 200 1998
+[14/Feb/2023 18:46:01] "GET /scheduler/time/ HTTP/1.1" 200 29
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+[14/Feb/2023 19:46:01] "GET /scheduler/dust/data/ HTTP/1.1" 200 1997
+[14/Feb/2023 19:46:01] "GET /scheduler/time/ HTTP/1.1" 200 29
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-14 20:00:00 UTC)" was missed by 0:00:01.087014
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-14 20:00:00 UTC)" was missed by 0:00:01.088107
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+[14/Feb/2023 20:46:01] "GET /scheduler/dust/data/ HTTP/1.1" 200 1999
+[14/Feb/2023 20:46:01] "GET /scheduler/time/ HTTP/1.1" 200 29
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+[14/Feb/2023 20:51:00] "GET / HTTP/1.1" 200 4311
+Not Found: /favicon.ico
+[14/Feb/2023 20:51:01] "GET /favicon.ico HTTP/1.1" 404 3004
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-14 21:20:00 UTC)" was missed by 0:00:01.055703
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-14 21:20:00 UTC)" was missed by 0:00:01.056690
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-14 21:30:00 UTC)" was missed by 0:00:01.027699
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-14 21:30:00 UTC)" was missed by 0:00:01.028668
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+[14/Feb/2023 21:46:01] "GET /scheduler/dust/data/ HTTP/1.1" 200 2000
+[14/Feb/2023 21:46:01] "GET /scheduler/time/ HTTP/1.1" 200 29
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+[14/Feb/2023 22:46:01] "GET /scheduler/dust/data/ HTTP/1.1" 200 1999
+[14/Feb/2023 22:46:01] "GET /scheduler/time/ HTTP/1.1" 200 29
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-14 23:00:00 UTC)" was missed by 0:00:01.081963
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-14 23:00:00 UTC)" was missed by 0:00:01.083401
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-14 23:40:00 UTC)" was missed by 0:00:01.017091
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-14 23:40:00 UTC)" was missed by 0:00:01.018233
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+[14/Feb/2023 23:46:01] "GET /scheduler/dust/data/ HTTP/1.1" 200 2000
+[14/Feb/2023 23:46:01] "GET /scheduler/time/ HTTP/1.1" 200 29
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-15 00:00:00 UTC)" was missed by 0:00:01.042467
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-15 00:00:00 UTC)" was missed by 0:00:01.043613
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-15 00:10:00 UTC)" was missed by 0:00:01.035472
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-15 00:10:00 UTC)" was missed by 0:00:01.036574
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+[15/Feb/2023 00:23:14] "GET / HTTP/1.1" 200 4311
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-15 00:50:00 UTC)" was missed by 0:00:01.084201
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-15 00:50:00 UTC)" was missed by 0:00:01.085287
+[15/Feb/2023 00:45:14] "GET / HTTP/1.1" 200 4311
+[15/Feb/2023 00:46:01] "GET /scheduler/dust/data/ HTTP/1.1" 200 1999
+[15/Feb/2023 00:46:01] "GET /scheduler/time/ HTTP/1.1" 200 29
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-15 01:10:00 UTC)" was missed by 0:00:01.064647
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-15 01:10:00 UTC)" was missed by 0:00:01.065732
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-15 01:20:00 UTC)" was missed by 0:00:01.037205
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-15 01:20:00 UTC)" was missed by 0:00:01.038209
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+[15/Feb/2023 01:38:39] "GET /account/login/ HTTP/1.1" 200 4311
+[15/Feb/2023 01:38:39] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 101894
+[15/Feb/2023 01:38:39] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 200 170909
+[15/Feb/2023 01:38:39] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 200 2532
+[15/Feb/2023 01:38:39] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 84378
+[15/Feb/2023 01:38:39] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 200 89501
+[15/Feb/2023 01:38:39] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 200 1265
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+[15/Feb/2023 01:46:01] "GET /scheduler/dust/data/ HTTP/1.1" 200 700
+[15/Feb/2023 01:46:01] "GET /scheduler/time/ HTTP/1.1" 200 29
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-15 02:00:00 UTC)" was missed by 0:00:01.059218
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-15 02:00:00 UTC)" was missed by 0:00:01.060191
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-15 02:30:00 UTC)" was missed by 0:00:01.049759
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-15 02:30:00 UTC)" was missed by 0:00:01.050901
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+[15/Feb/2023 02:46:01] "GET /scheduler/dust/data/ HTTP/1.1" 200 1100
+[15/Feb/2023 02:46:01] "GET /scheduler/time/ HTTP/1.1" 200 29
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-15 03:20:00 UTC)" was missed by 0:00:01.012613
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-15 03:20:00 UTC)" was missed by 0:00:01.013526
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+[15/Feb/2023 03:21:11] code 400, message Bad request syntax ('MGLNDD_139.150.73.211_8000')
+[15/Feb/2023 03:21:11] "MGLNDD_139.150.73.211_8000" 400 -
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-15 03:40:00 UTC)" was missed by 0:00:01.036926
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-15 03:40:00 UTC)" was missed by 0:00:01.038051
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+[15/Feb/2023 03:46:01] "GET /scheduler/dust/data/ HTTP/1.1" 200 1501
+[15/Feb/2023 03:46:01] "GET /scheduler/time/ HTTP/1.1" 200 29
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-15 04:50:00 UTC)" was missed by 0:00:01.022842
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-15 04:50:00 UTC)" was missed by 0:00:01.023992
+[15/Feb/2023 04:46:01] "GET /scheduler/dust/data/ HTTP/1.1" 200 2001
+[15/Feb/2023 04:46:01] "GET /scheduler/time/ HTTP/1.1" 200 29
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+[15/Feb/2023 05:20:00] code 400, message Bad HTTP/0.9 request type ('\x00\x00\x00')
+[15/Feb/2023 05:20:00] "    c                           " 400 -
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+[15/Feb/2023 05:46:01] "GET /scheduler/dust/data/ HTTP/1.1" 200 2002
+[15/Feb/2023 05:46:01] "GET /scheduler/time/ HTTP/1.1" 200 29
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-15 06:10:00 UTC)" was missed by 0:00:01.002156
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-15 06:30:00 UTC)" was missed by 0:00:01.009854
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-15 06:30:00 UTC)" was missed by 0:00:01.011225
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-15 06:50:00 UTC)" was missed by 0:00:01.024476
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-15 06:50:00 UTC)" was missed by 0:00:01.025484
+[15/Feb/2023 06:46:01] "GET /scheduler/dust/data/ HTTP/1.1" 200 2003
+[15/Feb/2023 06:46:01] "GET /scheduler/time/ HTTP/1.1" 200 29
+HUM_OPERATING
+AIR_QUALITY_OPERATING
+[15/Feb/2023 06:53:07] "GET /account/login/api?username=test1&password=test123! HTTP/1.1" 200 12
+[15/Feb/2023 06:53:15] "GET /account/login/api?username=test&password=test123! HTTP/1.1" 200 12
+[15/Feb/2023 06:53:21] "GET /account/login/api?username=test&password=test123! HTTP/1.1" 200 12
+/usr/local/lib/python3.6/dist-packages/django/db/models/fields/__init__.py:1419: RuntimeWarning: DateTimeField UserLog.login_at received a naive datetime (2023-02-15 06:53:41.888541) while time zone support is active.
+  RuntimeWarning)
+[15/Feb/2023 06:53:41] "GET /account/login/api?username=pknu&password=test123! HTTP/1.1" 200 8
+[15/Feb/2023 06:57:18] "POST /scheduler/dust/switch/modify/adu/ HTTP/1.1" 200 22
+[15/Feb/2023 06:57:46] "GET /scheduler/dust/switch/modify/adu/ HTTP/1.1" 200 22
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-15 07:10:00 UTC)" was missed by 0:00:01.031182
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-15 07:10:00 UTC)" was missed by 0:00:01.032175
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-15 07:20:00 UTC)" was missed by 0:00:01.057011
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-15 07:20:00 UTC)" was missed by 0:00:01.057984
+/usr/local/lib/python3.6/dist-packages/apscheduler/util.py:428: PytzUsageWarning: The localize method is no longer necessary, as this time zone supports the fold attribute (PEP 495). For more details on migrating to a PEP 495-compliant implementation, see https://pytz-deprecation-shim.readthedocs.io/en/latest/migration.html
+  return tzinfo.localize(dt)
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 6 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): django_apscheduler.
+Run 'python manage.py migrate' to apply them.
+February 15, 2023 - 07:13:07
+Django version 3.2.17, using settings 'myserver.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+[15/Feb/2023 07:13:52] "GET /scheduler/api/dust/switch/get/ HTTP/1.1" 200 59
+Not Found: /favicon.ico
+[15/Feb/2023 07:13:53] "GET /favicon.ico HTTP/1.1" 404 3004
+[15/Feb/2023 07:14:56] "GET /scheduler/api/dust/switch/get/ HTTP/1.1" 200 57
+[15/Feb/2023 07:16:39] "GET /scheduler/dust/data/ HTTP/1.1" 200 2002
+[15/Feb/2023 07:16:49] "GET /scheduler/dust/list/ HTTP/1.1" 200 83347
+[15/Feb/2023 07:16:49] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 304 0
+[15/Feb/2023 07:16:49] "GET /static/js/dashboard.js HTTP/1.1" 304 0
+[15/Feb/2023 07:16:50] "GET /scheduler/dust/switch/get/ HTTP/1.1" 200 80
+[15/Feb/2023 07:18:08] "GET /scheduler/airquality/data/ HTTP/1.1" 200 20988
+/usr/local/lib/python3.6/dist-packages/django/db/models/fields/__init__.py:1419: RuntimeWarning: DateTimeField UserLog.login_at received a naive datetime (2023-02-15 07:19:18.468538) while time zone support is active.
+  RuntimeWarning)
+[15/Feb/2023 07:19:18] "GET /account/login/api?username=pknu&password=test123! HTTP/1.1" 200 8
+Internal Server Error: /scheduler/dust/switch/modify/adu/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.6/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.6/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.6/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/root/Klaen_server/myserver/scheduler/views.py", line 654, in ard_dust_switch_modify
+    humidity = request['humidity']
+KeyError: 'humidity'
+[15/Feb/2023 07:19:23] "POST /scheduler/dust/switch/modify/adu/ HTTP/1.1" 500 15314
+AIR_QUALITY_OPERATING
+HUM_OPERATING
+[15/Feb/2023 07:20:15] "GET /scheduler/api/dust/switch/get/ HTTP/1.1" 200 57
+[15/Feb/2023 07:20:20] "GET /scheduler/airquality/data/ HTTP/1.1" 200 21088
+/usr/local/lib/python3.6/dist-packages/django/db/models/fields/__init__.py:1419: RuntimeWarning: DateTimeField UserLog.login_at received a naive datetime (2023-02-15 07:20:44.781937) while time zone support is active.
+  RuntimeWarning)
+[15/Feb/2023 07:20:44] "GET /account/login/api?username=pknu&password=test123! HTTP/1.1" 200 8
+Internal Server Error: /scheduler/dust/switch/modify/adu/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.6/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.6/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.6/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/root/Klaen_server/myserver/scheduler/views.py", line 654, in ard_dust_switch_modify
+    humidity = request['humidity']
+KeyError: 'humidity'
+[15/Feb/2023 07:20:48] "POST /scheduler/dust/switch/modify/adu/ HTTP/1.1" 500 15314
+[15/Feb/2023 07:21:44] "GET / HTTP/1.1" 200 4311
+[15/Feb/2023 07:21:54] "GET /scheduler/airquality/data/ HTTP/1.1" 200 21088
+[15/Feb/2023 07:22:15] "GET /scheduler/api/dust/switch/get/ HTTP/1.1" 200 57
+[15/Feb/2023 07:22:43] "GET /scheduler/api/dust/switch/get/ HTTP/1.1" 200 57
+[15/Feb/2023 07:22:43] "GET /scheduler/api/dust/switch/get/ HTTP/1.1" 200 57
+[15/Feb/2023 07:22:44] "POST /scheduler/dust/switch/modify/adu/ HTTP/1.1" 200 22
+[15/Feb/2023 07:22:44] "GET /scheduler/api/dust/switch/get/ HTTP/1.1" 200 59
+[15/Feb/2023 07:22:45] "GET /scheduler/api/dust/switch/get/ HTTP/1.1" 200 59
+[15/Feb/2023 07:22:55] "GET /scheduler/api/dust/switch/get/ HTTP/1.1" 200 59
+[15/Feb/2023 07:22:55] "GET /scheduler/api/dust/switch/get/ HTTP/1.1" 200 59
+[15/Feb/2023 07:22:55] "GET /scheduler/airquality/data/ HTTP/1.1" 200 21088
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-15 07:30:00 UTC)" was missed by 0:00:01.050837
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-15 07:30:00 UTC)" was missed by 0:00:01.552989
+[15/Feb/2023 07:37:43,826] - Broken pipe from ('167.94.146.58', 45052)
+
+[15/Feb/2023 07:37:45] "GET / HTTP/1.1" 200 4311
+[15/Feb/2023 07:37:45,443] - Broken pipe from ('167.94.146.58', 59732)
+
+[15/Feb/2023 07:37:45] "GET / HTTP/1.1" 200 4311
+[15/Feb/2023 07:37:46] code 505, message Invalid HTTP version (2.0)
+[15/Feb/2023 07:37:46] "PRI * HTTP/2.0" 505 -
+Not Found: /favicon.ico
+[15/Feb/2023 07:37:47] "GET /favicon.ico HTTP/1.1" 404 3004
+Run time of job "get_air_quality (trigger: cron[minute='*/10'], next run at: 2023-02-15 07:40:00 UTC)" was missed by 0:00:01.057657
+Run time of job "get_humidity (trigger: cron[minute='*/10'], next run at: 2023-02-15 07:40:00 UTC)" was missed by 0:00:01.566828
+[15/Feb/2023 07:44:18] "GET /scheduler/api/dust/switch/get/ HTTP/1.1" 200 59
+[15/Feb/2023 07:44:18] "GET /scheduler/api/dust/switch/get/ HTTP/1.1" 200 59
+[15/Feb/2023 07:44:18] "GET /scheduler/airquality/data/ HTTP/1.1" 200 21088
+[15/Feb/2023 07:46:01] "GET /scheduler/dust/data/ HTTP/1.1" 200 2002
+[15/Feb/2023 07:46:01] "GET /scheduler/time/ HTTP/1.1" 200 29
+/usr/local/lib/python3.6/dist-packages/django/db/models/fields/__init__.py:1419: RuntimeWarning: DateTimeField UserLog.login_at received a naive datetime (2023-02-15 07:46:21.930393) while time zone support is active.
+  RuntimeWarning)
+[15/Feb/2023 07:46:21] "GET /account/login/api?username=pknu&password=test123! HTTP/1.1" 200 8
+[15/Feb/2023 07:46:23] "GET /scheduler/api/dust/switch/get/ HTTP/1.1" 200 59
+[15/Feb/2023 07:46:23] "GET /scheduler/airquality/data/ HTTP/1.1" 200 21088
+[15/Feb/2023 07:46:24] "GET /scheduler/api/dust/switch/get/ HTTP/1.1" 200 59
+[15/Feb/2023 07:46:24] "GET /scheduler/airquality/data/ HTTP/1.1" 200 21088
+[15/Feb/2023 07:46:25] "GET /scheduler/api/dust/switch/get/ HTTP/1.1" 200 59
+[15/Feb/2023 07:47:20] "GET /scheduler/api/dust/switch/get/ HTTP/1.1" 200 59
+[15/Feb/2023 07:47:20] "GET /scheduler/api/dust/switch/get/ HTTP/1.1" 200 59
+[15/Feb/2023 07:47:20] "GET /scheduler/airquality/data/ HTTP/1.1" 200 21088
+[15/Feb/2023 07:47:43] "GET /scheduler/api/dust/switch/get/ HTTP/1.1" 200 59
+[15/Feb/2023 07:47:43] "GET /scheduler/api/dust/switch/get/ HTTP/1.1" 200 59
+[15/Feb/2023 07:47:44] "GET /scheduler/airquality/data/ HTTP/1.1" 200 21088
+[15/Feb/2023 07:47:52] "GET /scheduler/api/dust/switch/get/ HTTP/1.1" 200 59
+[15/Feb/2023 07:47:52] "GET /scheduler/api/dust/switch/get/ HTTP/1.1" 200 59
+[15/Feb/2023 07:47:53] "GET /scheduler/airquality/data/ HTTP/1.1" 200 21088
+[15/Feb/2023 07:47:54] "GET /scheduler/api/dust/switch/get/ HTTP/1.1" 200 59
+[15/Feb/2023 07:47:54] "GET /scheduler/api/dust/switch/get/ HTTP/1.1" 200 59
+[15/Feb/2023 07:47:54] "GET /scheduler/airquality/data/ HTTP/1.1" 200 21088
+Internal Server Error: /scheduler/dust/switch/modify/adu/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.6/dist-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.6/dist-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.6/dist-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/root/Klaen_server/myserver/scheduler/views.py", line 654, in ard_dust_switch_modify
+    humidity = request['humidity']
+KeyError: 'humidity'
+[15/Feb/2023 07:47:55] "POST /scheduler/dust/switch/modify/adu/ HTTP/1.1" 500 15314
+[15/Feb/2023 07:48:02] "GET /scheduler/api/dust/switch/get/ HTTP/1.1" 200 59
+[15/Feb/2023 07:48:02] "GET /scheduler/api/dust/switch/get/ HTTP/1.1" 200 59
+[15/Feb/2023 07:48:03] "GET /scheduler/airquality/data/ HTTP/1.1" 200 21088
