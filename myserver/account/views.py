@@ -3,6 +3,7 @@ from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render, redirect
 from django.contrib.auth.hashers import make_password, check_password
 from django.views.decorators.csrf import csrf_exempt
+from django.views.generic import ListView, DeleteView, UpdateView, CreateView, DetailView
 from rest_framework.parsers import JSONParser
 from django.contrib.auth.hashers import check_password
 from .models import User, UserLog, UserGroup
@@ -163,6 +164,8 @@ def logout(request):
     return redirect('/account/login/')
 
 # 사용자
+# user list HTML
+# Users/User search
 def userlists(request):
     template_name = 'user_list.html'
     user_list = User.objects.all()

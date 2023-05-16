@@ -145,6 +145,53 @@ def get_weather_data(date):
 
     return outData
 
+
+
+def get_sunrise_data(date):
+    if date == None:
+        startDt = datetime.datetime.today() - timedelta(days=3)
+        endDt = datetime.datetime.today() - timedelta(days=1)
+        startDt = startDt.strftime("%Y%m%d")
+        endDt = endDt.strftime("%Y%m%d")
+
+    serviceKey = "FXEr17kvrd8Whbj9vNbm/RAkUbRnRsERDGr7+jdrHjYU6ZJKnNixEYbxwfF4BXuLhvewafwgoITp4BE+WK9org=="
+    url = 'http://apis.data.go.kr/B090041/openapi/service/RiseSetInfoService/getAreaRiseSetInfo'
+    # queryParams = '?' + 'serviceKey=' + serviceKey + '&locdate=20230501&location=서울&dataType=json'
+    # & dataCd = ASOS & dateCd = DAY & startDt = 20100101 & endDt = 20100102 & stnIds = 159
+    # request = requests.get(url + queryParams)
+    params = {'serviceKey': serviceKey, 'locdate': '20230501', 'location': '서울'}
+    response = requests.get(url, params=params)
+    content = response.text
+    xml_obj = BeautifulSoup(content, 'lxml-xml')
+    rows = xml_obj.findAll('item')
+
+    # 각 행의 컬럼, 이름, 값을 가지는 리스트 만들기
+    row_list = []  # 행값
+    name_list = []  # 열이름값
+    value_list = []  # 데이터값
+
+    # xml 안의 데이터 수집
+    for i in range(0, len(rows)):
+        columns = rows[i].find_all()
+        # 첫째 행 데이터 수집
+        for j in range(0, len(columns)):
+            if i == 0:
+                # 컬럼 이름 값 저장
+                name_list.append(columns[j].name)
+            # 컬럼의 각 데이터 값 저장
+            if j == 15 or j == 16:
+                value_list.append(columns[j].text.replace(' ', ''))
+        # 각 행의 value값 전체 저장
+        row_list.append(value_list)
+        # 데이터 리스트 값 초기화
+        value_list = []
+    print(row_list)
+
+
+    return response.content
+
+
+
 client = pymongo.MongoClient(dbLocation)
 db = client['server_db']
 airdb = db['scheduler_airquality']

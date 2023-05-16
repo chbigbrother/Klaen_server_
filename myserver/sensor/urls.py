@@ -5,10 +5,9 @@ from .views import *
 
 app_name = 'sensor'
 urlpatterns = [
-    path('busanQ/list/', busanQlists),
-    path('humidity/list/', humiditylists),
-    path('iaq/list/', iaqlists),
-    path('dust/list/', dustlists),
+    path('koreaQ/list/', KoreaAirLists.as_view()),
+    path('iaq/list/', IaqDataLists.as_view()),
+    path('airsensors/list/', AirSensors.as_view()),
     path('dust/data/', dust_data_per_time),
     path('humidity/data/', humidity_data),
 
@@ -25,4 +24,5 @@ urlpatterns = [
 
     path('iaq/csv/upload/', upload_csv_file),
     path('iaq/upload/', upload_iaq_csv),
+
 ]

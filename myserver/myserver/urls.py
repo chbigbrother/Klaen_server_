@@ -19,15 +19,14 @@ from django.urls import path, include
 from scheduler.views import *
 from .views import *
 from account.views import login
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('get/airquality/', get_busan_air_qualily),
-    path('post/airquality/', post_air_quality),
     path('account/', include('account.urls')),
     path('scheduler/', include('scheduler.urls')),
     path('sensor/', include('sensor.urls')),
     path('menu/', include('menu.urls')),
     path('', login),
-    path('home/', home),
+    path('home/', Home.as_view()),
 ]
 urlpatterns += staticfiles_urlpatterns()

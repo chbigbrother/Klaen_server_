@@ -8,6 +8,7 @@ urlpatterns = [
     path('time/', max_site_per_time),
     path('busan/data/', busan_data_list),
     path('other/factors/', other_factor_lists),
+    path('sunrise/data/', get_sunrise_data),
 
     path('settings/', schedule_settings),
     path('save/settings/', save_schedule_settings),

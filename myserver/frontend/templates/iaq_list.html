@@ -15,8 +15,33 @@
                 Data.csv Upload
             </button>
     </div>
-
-
+</div>
+<div class="card shadow mb-3">
+    <div class="card-body" style="height:80px; padding-left:2rem;">
+        <div class="d-flex align-items-center justify-content-between mb-3">
+            <!--<h1 class="h3 mb-0 text-gray-800">Dashboard</h1>-->
+            <form method="get" action="/sensor/airsensors/list/">
+                <div class="row g-2 align-items-center mb-2">
+                    <div class="col-5">
+                      <div class="input-group">
+                        <input type="date" id="date_from" class="form-control"  placeholder="from"  name="dateFrom" value="{{ view.dateFrom }}" autocomplete="off">
+                      </div>
+                    </div>
+                    <div class="col-auto">~</div>
+                    <div class="col-5">
+                      <div class="input-group">
+                        <input type="date" id="date_to"  class="form-control"  placeholder="to" name="dateTo" value="{{ view.dateTo }}" autocomplete="off">
+                      </div>
+                    </div>
+                    <div class="col-1 input-group-append">
+                        <button class="btn btn-info " href="#">
+                            <i class="fas fa-search fa-sm"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
 <div class="card shadow mb-4">
     <div class="card-header py-3">
