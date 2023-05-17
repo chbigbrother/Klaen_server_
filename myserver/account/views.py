@@ -163,19 +163,15 @@ def logout(request):
     # 로그아웃 후 127.0.0.1:8000/ 이동
     return redirect('/account/login/')
 
-# 사용자
 # user list HTML
-# Users/User search
-def userlists(request):
+# Users/User Search
+class UserSearch(ListView):
     template_name = 'user_list.html'
-    user_list = User.objects.all()
-    date = datetime.datetime.today() - timedelta(days=3)
-    date = {
-        "user_list": user_list,
-        'dateFrom': date.strftime("%Y-%m-%d"),
-        # 'path': '회사정보 / 설비정보등록'
-    }
-    return render(request, template_name, date)
+    context_object_name = 'user_list'
+
+    def get_queryset(self):
+        self.dateFrom = datetime.datetime.today() - timedelta(days=3)
+        return User.objects.all()
 
 # 사용자
 def userstats(request):

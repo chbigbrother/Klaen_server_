@@ -176,23 +176,6 @@ function pm10Pie(){
 
 }
 
-/*
-const chatSocket = new WebSocket(
-    'ws://'
-    + window.location.host
-    + '/post/airquality/'
-);
-
-chatSocket.onmessage = function(e) {
-    const data = JSON.parse(e.data);
-    document.querySelector('#chat-log').value += (data.message + '\n');
-};
-
-chatSocket.onclose = function(e) {
-    console.error('Chat socket closed unexpectedly');
-};
-*/
-
 $('.send-new-email').on('click', function(){
     $('#modal-report').modal('show');
 });
@@ -236,7 +219,8 @@ $('.form-selectgroup-input').on('click', function(target){
         }
 
     });
-})
+});
+
 switches();
 function switches(){
     $.ajax({
@@ -266,13 +250,6 @@ $('.chartSelect').on('change', function(e){
     $('#myAreaChart').remove(); // this is my <canvas> element
     $('.chart-selections').append('<canvas id="myAreaChart" class="chartjs-render-monitor" width="1606px" height="318px"></canvas>');
     pm10Chart(type);
-//    if(type=='bar'){
-//
-//    } else{
-//        setInterval(function () {pm10Chart();
-//        pm10Pie();}, 3600000);//request every x seconds
-//    }
-
 });
 
 setInterval(function () {
@@ -281,4 +258,3 @@ setInterval(function () {
     $('.chart-selections').append('<canvas id="myAreaChart" class="chartjs-render-monitor" width="1606px" height="318px"></canvas>');
     pm10Chart(type);
 }, 3600000);
-//        pm10Pie();}, 3600000);//request every x seconds

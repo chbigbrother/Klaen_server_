@@ -22,7 +22,6 @@ $(".editContBtn").on("click", function(target){
             console.log(error)
         }
     });
-
     $("#SettingModal").modal('show');
 });
 

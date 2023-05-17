@@ -11,7 +11,7 @@ urlpatterns = [
     path('login/api', login_api),
     path('logout/api', logout_api),
     path('user/list/api', userlists_api),
-    path('user/list/', userlists),
+    path('user/list/', UserSearch.as_view()),
     path('user/stat/', userstats),
     path('user/stat/list/', userstat_data),
     path('user/group/update/', user_group_update),

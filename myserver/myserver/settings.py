@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_apscheduler',
     'rest_framework', # 프레임워크 추가
+    'widget_tweaks',
     'scheduler',
     'sensor',
     'account',

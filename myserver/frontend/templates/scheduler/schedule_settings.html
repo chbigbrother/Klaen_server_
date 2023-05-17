@@ -4,7 +4,7 @@
 <div class="card shadow mb-4">
     <div class="card-header py-3">
         <h6 class="m-0 font-weight-bold text-primary">Scheduler Settings</h6>
-        <button class="btn btn-primary ml-auto send-data" type="button" style="position:absolute; top: 7px; right: 2%">Create Settings</button>
+        <a href="{% url 'scheduler:add' %}" class="btn btn-primary ml-auto send-data" type="button" style="position:absolute; top: 7px; right: 2%">Create Settings</a>
     </div>
     <div class="card-body">
         <div class="table-responsive">
@@ -26,7 +26,7 @@
                         <td>
                             <p class="text-content">
                                 <span class="item action-buttons">
-                                    <a href="#"  id="edit_{{ set.type }}" class="btn btn-secondary light mr-2 editContBtn">
+                                    <a href="{% url 'scheduler:update' set.id %}"  id="edit_{{ set.type }}" class="btn btn-secondary light mr-2 editContBtn">
                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="24px" viewBox="0 0 24 24" version="1.1" class="svg-main-icon">
                                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                                 <rect x="0" y="0" width="24" height="24"></rect>
@@ -35,7 +35,7 @@
                                             </g>
                                         </svg>
                                     </a>
-                                    <a href="#" id="delete_{{ set.type }}" class="btn btn-danger light deleteBtn">
+                                    <a href="{% url 'scheduler:delete' set.id %}" id="delete_{{ set.type }}" class="btn btn-danger light deleteBtn">
                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 24 24" version="1.1" class="svg-main-icon">
                                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                                 <rect x="0" y="0" width="24" height="24"></rect>
@@ -55,44 +55,6 @@
     </div>
 </div>
 
-<!-- ***************************************************************** activationSettingModal ***************************************************************** -->
-<!-- setting.txt 정보 입력 Modal START -->
-<div class="modal modal-blur fade" id="SettingModal" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
-    <div class="modal-dialog modal-l modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="exampleModalLabel">Set Schedule Timer</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body pknu-modal-body-overflow">
-                <div class="row pknu-modal-row">
-                    <div class="col-md-3"><label for="type" class="pt-2" style="font-size:0.95rem;">Schedule Type</label></div>
-                    <div class="col-lg-6" >
-                        <select class="form-control" name="select" id="type">
-                            <option value="dustSensor" class="type">dust sensor</option>
-                            <option value="humiditySensor" class="type">humidity sensor</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="row pknu-modal-row">
-                    <div class="col-md-3"><label for="timer" class="pt-2" style="font-size:0.95rem;">Timer</label></div>
-                    <div class="col-lg-6" >
-                         <input class="form-control text-center" type="text" name="timer" id="timer" />
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer" id="htfooter">
-                <button type="button" class="btn btn-link link-secondary" data-bs-dismiss="modal">
-                    <i class="far fa-window-close fa-sm text-white-50"></i> &nbsp; Cancel
-                </button>
-                <a href="#" onclick="saveSettings()" class="btn btn-primary ms-auto">
-                    <i class="far fa-paper-plane fa-sm text-white-50"></i> &nbsp; Save
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- config.txt 정보 입력 Modal END -->
 <script src="/static/js/schedule_settings.js"></script>
 
 {% endblock %}

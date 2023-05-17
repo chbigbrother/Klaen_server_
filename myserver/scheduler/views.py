@@ -2,6 +2,8 @@
 from django.conf import settings
 from django.core.mail import EmailMessage, send_mail
 from django.http import JsonResponse, QueryDict
+from django.views.generic import ListView, DeleteView, UpdateView, CreateView, DetailView
+from django.urls import reverse_lazy
 import datetime
 from datetime import timedelta
 import json, datetime
@@ -28,7 +30,7 @@ import json
 to_year = int(datetime.datetime.today().strftime("%Y"))
 to_month = int(datetime.datetime.today().strftime("%m"))
 to_day = int(datetime.datetime.today().strftime("%d"))
-
+date = datetime.datetime.today() - timedelta(days=3)
 
 def send_mail_():
     # 날짜 셋팅
@@ -38,10 +40,11 @@ def send_mail_():
 
     print("OPERATING")
 
-serviceKey = "FXEr17kvrd8Whbj9vNbm%2FRAkUbRnRsERDGr7%2BjdrHjYU6ZJKnNixEYbxwfF4BXuLhvewafwgoITp4BE%2BWK9org%3D%3D"
-serviceKeyDecoded = unquote(serviceKey, 'UTF-8')
+
 def get_busan_air_qualily():
     print("OPERATING")
+    serviceKey = "FXEr17kvrd8Whbj9vNbm%2FRAkUbRnRsERDGr7%2BjdrHjYU6ZJKnNixEYbxwfF4BXuLhvewafwgoITp4BE%2BWK9org%3D%3D"
+    serviceKeyDecoded = unquote(serviceKey, 'UTF-8')
     url = "http://apis.data.go.kr/6260000/AirQualityInfoService/getAirQualityInfoClassifiedByStation"
     queryParams = '?' + 'serviceKey=' + serviceKey + '&resultType=json'
 
@@ -97,16 +100,48 @@ def get_busan_air_qualily():
             pm10Cai=air_data[i]['pm10Cai'],
         )
 
-def other_factor_lists(request):
+# schedule settings HTML
+# Sensors Location
+class SchedulerSettings(ListView):
+
+    template_name = 'scheduler/schedule_settings.html'
+    context_object_name = 'settings'
+
+    def get_queryset(self):
+
+        return ScheduleSettings.objects.all()
+
+# edit scheduler settings HTML
+# Sensors Location > Edit
+class SchedulerSettingsEdit(UpdateView):
+    model = ScheduleSettings
+    fields = ['id','type','timer']
+    template_name = 'scheduler/scheduler_settings_edit.html'
+    success_url = reverse_lazy('scheduler:list')
+
+
+# edit scheduler settings HTML
+# Sensors Location > Delete
+class SchedulerSettingsDelete(DeleteView):
+    model = ScheduleSettings
+    success_url = reverse_lazy('scheduler:list')
+
+# edit scheduler settings HTML
+# Sensors Location > Delete
+class SchedulerSettingsAdd(CreateView):
+    model = ScheduleSettings
+    fields = ['type', 'timer']
+    template_name = 'scheduler/scheduler_settings_edit.html'
+    success_url = reverse_lazy('scheduler:list')
+
+# other factors HTML
+# Data Mining / Other Factors
+class OtherFactors(ListView):
     template_name = 'other_factors.html'
-    hum_list = HumiditySensor.objects.filter().order_by("-created_at")
-    date = datetime.datetime.today() - timedelta(days=3)
-    date = {
-        "hum_list": hum_list,
-        'dateFrom': date.strftime("%Y-%m-%d"),
-        # 'path': '회사정보 / 설비정보등록'
-    }
-    return render(request, template_name, date)
+
+    def get_queryset(self):
+
+        return HumiditySensor.objects.filter().order_by("-created_at")
 
 def get_weather_data(date):
     if date == None:
@@ -144,7 +179,6 @@ def get_weather_data(date):
         outData.append(data_dict)
 
     return outData
-
 
 
 def get_sunrise_data(date):
@@ -185,8 +219,6 @@ def get_sunrise_data(date):
         row_list.append(value_list)
         # 데이터 리스트 값 초기화
         value_list = []
-    print(row_list)
-
 
     return response.content
 
@@ -194,12 +226,8 @@ def get_sunrise_data(date):
 
 client = pymongo.MongoClient(dbLocation)
 db = client['server_db']
-airdb = db['scheduler_airquality']
-humdb = db['scheduler_humiditysensor']
 tempdb = db['scheduler_temperaturesensor']
-dustdb = db['scheduler_dustsensor']
 dust_switch_db = db['scheduler_dustsensorswitch']
-settingsdb = db['scheduler_schedulesettings']
 
 # recent busan air quality data
 def max_site_per_time(request):
@@ -327,83 +355,6 @@ def post_air_quality(request):
 
     return HttpResponse(json.dumps(result_dict, default=json_default)) # demo_task(soup)
 
-# scheduling timer info
-def schedule_setting():
-    timer = ScheduleSettings.object.all().order_by('id').last()
-    # ScheduleSettings.objects.create(
-        # timer="1"
-    # )
-    return timer
-
-# busan air quality data list
-def busan_data_list(request):
-    airq_list = AirQuality.objects.all()
-    result_dict = {}
-    result = []
-
-    for i in airq_list:
-        air_dict = {}
-        air_dict['site'] = i.site
-        air_dict['areaIndex'] = i.areaIndex
-        air_dict['controlnumber'] = i.controlnumber
-        air_dict['repItem'] = i.repItem
-        air_dict['repVal'] = i.repVal
-        air_dict['repCai'] = i.repCai
-        air_dict['so2'] = i.so2
-        air_dict['so2Cai'] = i.so2Cai
-        air_dict['no2'] = i.no2
-        air_dict['no2Cai'] = i.no2Cai
-        air_dict['o3'] = i.o3
-        air_dict['o3Cai'] = i.o3Cai
-        air_dict['co'] = i.co
-        air_dict['coCai'] = i.coCai
-        air_dict['pm25'] = i.pm25
-        air_dict['pm25Cai'] = i.pm25Cai
-        air_dict['pm10'] = i.pm10
-        air_dict['pm10Cai'] = i.pm10Cai
-        result.append(air_dict)
-
-    def json_default(value):
-        if isinstance(value, datetime.date):
-            return value.strftime('%Y-%m-%d')
-        raise TypeError('not JSON serializable')
-
-    return HttpResponse(json.dumps(result, default=json_default))
-
-# schedule settings HTML
-def schedule_settings(request):
-    template_name = 'schedule_settings.html'
-    settings = ScheduleSettings.objects.all()
-    date = datetime.datetime.today() - timedelta(days=3)
-    date = {
-        "settings": settings,
-        'dateFrom': date.strftime("%Y-%m-%d"),
-        # 'path': '회사정보 / 설비정보등록'
-    }
-    return render(request, template_name, date)
-
-# save schedule settings
-@csrf_exempt
-def save_schedule_settings(request):
-
-    # POST 로 받아온 값 dict 로 담기
-    if request.method == 'POST':
-        request = json.loads(request.body)
-        type = request['type']
-        timer = request['timer']
-        command_type = request['command_type']
-
-    if command_type == "create":
-        ScheduleSettings.objects.update_or_create(
-            type=type,
-            timer=timer,
-        )
-    else:
-        sch_update = ScheduleSettings.objects.get(type=type)
-        sch_update.timer = timer
-        sch_update.save()
-    return JsonResponse({"message": 'success'})
-
 @csrf_exempt
 def search_type(request):
     type = request.GET.get('type')
@@ -425,7 +376,6 @@ def search_type(request):
     return HttpResponse(json.dumps(result, default=json_default))  # demo_task(soup)
 
 ## arduino and react native app api ##
-
 # @api_view(['GET', 'POST'])
 @csrf_exempt
 def ard_dust_switch_modify(request):
